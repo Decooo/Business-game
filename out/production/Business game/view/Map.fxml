@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
    <children>
       <Pane layoutX="440.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: white; -fx-border-color: black;">
          <children>
@@ -16,7 +16,7 @@
             <Label layoutX="26.0" layoutY="89.0" text="120 $" />
          </children>
       </Pane>
-      <Pane layoutX="600.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: #white; -fx-border-color: black;">
+      <Pane layoutX="600.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: white; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #00ffcc; -fx-border-color: black;" />
             <Label layoutX="21.0" layoutY="20.0" text="Kraków" />
