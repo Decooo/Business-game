@@ -1,5 +1,6 @@
 package main;
 
+import game.Game;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -28,5 +29,6 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         Main.primaryStage = primaryStage;
         loadFXML("MainMenu", 490, 580);
+
     }
 }
