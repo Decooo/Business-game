@@ -15,4 +15,10 @@ public class CurrentNumberOfPlayers {
     public static void removePlayer() {
         currentNumberOfPlayers--;
     }
+
+    public static boolean noEnemies() {
+        if (currentNumberOfPlayers >= 2) {
+            return false;
+        } else return true;
+    }
 }

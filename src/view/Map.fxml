@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -7,37 +8,37 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MapController">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MapController">
    <children>
-      <Pane layoutX="440.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: white; -fx-border-color: black;">
+      <Pane fx:id="paneField10" layoutX="440.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: white; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #00ffcc; -fx-border-color: black;" />
             <Label layoutX="14.0" layoutY="20.0" text="Warszawa" />
             <Label layoutX="26.0" layoutY="89.0" text="120 $" />
          </children>
       </Pane>
-      <Pane layoutX="600.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: white; -fx-border-color: black;">
+      <Pane fx:id="paneField8" layoutX="600.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: white; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #00ffcc; -fx-border-color: black;" />
             <Label layoutX="21.0" layoutY="20.0" text="Kraków" />
             <Label layoutX="26.0" layoutY="89.0" text="100 $" />
          </children>
       </Pane>
-      <Pane layoutX="680.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: white; -fx-border-color: black;">
+      <Pane fx:id="paneField7" layoutX="680.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: white; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #00ffcc; -fx-border-color: black;" />
             <Label layoutX="17.0" layoutY="20.0" text="Rzeszów" />
             <Label layoutX="26.0" layoutY="89.0" text="100 $" />
          </children>
       </Pane>
-      <Pane layoutX="1080.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: white; -fx-border-color: black;">
+      <Pane fx:id="paneField2" layoutX="1080.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: white; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: Orange; -fx-border-color: black;" />
             <Label layoutX="20.0" layoutY="20.0" text="Saloniki" />
             <Label layoutX="29.0" layoutY="89.0" text="60 $" />
          </children>
       </Pane>
-      <Pane layoutX="920.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField4" layoutX="920.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: Orange; -fx-border-color: black;" />
             <Label layoutX="25.0" layoutY="20.0" text="Ateny">
@@ -48,14 +49,14 @@
             <Label layoutX="29.0" layoutY="89.0" text="60 $" />
          </children>
       </Pane>
-      <Pane layoutX="1180.0" layoutY="500.0" prefHeight="120.0" prefWidth="80.0" rotate="90.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField42" layoutX="1180.0" layoutY="500.0" prefHeight="120.0" prefWidth="80.0" rotate="90.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: Black; -fx-border-color: black;" />
             <Label layoutX="17.0" layoutY="27.0" text="Wiedeń" />
             <Label layoutX="25.0" layoutY="89.0" text="400 $" />
          </children>
       </Pane>
-      <Pane layoutX="1180.0" layoutY="340.0" prefHeight="120.0" prefWidth="80.0" rotate="90.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField40" layoutX="1180.0" layoutY="340.0" prefHeight="120.0" prefWidth="80.0" rotate="90.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: Black; -fx-border-color: black;" />
             <Label layoutX="17.0" layoutY="27.0" text="Salzburg">
@@ -66,112 +67,112 @@
             <Label layoutX="25.0" layoutY="89.0" text="350 $" />
          </children>
       </Pane>
-      <Pane layoutX="20.0" layoutY="500.0" prefHeight="120.0" prefWidth="80.0" rotate="270.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField16" layoutX="20.0" layoutY="500.0" prefHeight="120.0" prefWidth="80.0" rotate="270.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #6600cc; -fx-border-color: black;" />
             <Label layoutX="25.0" layoutY="20.0" text="Paryż" />
             <Label layoutX="25.0" layoutY="89.0" text="160 $" />
          </children>
       </Pane>
-      <Pane layoutX="200.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField13" layoutX="200.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #6600cc; -fx-border-color: black;" />
             <Label layoutX="27.0" layoutY="20.0" text="Lyon" />
             <Label layoutX="25.0" layoutY="89.0" text="140 $" />
          </children>
       </Pane>
-      <Pane layoutX="280.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField12" layoutX="280.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #6600cc; -fx-border-color: black;" />
             <Label layoutX="18.0" layoutY="20.0" text="Marsylia" />
             <Label layoutX="25.0" layoutY="89.0" text="140 $" />
          </children>
       </Pane>
-      <Pane layoutX="20.0" layoutY="180.0" prefHeight="120.0" prefWidth="80.0" rotate="270.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField20" layoutX="20.0" layoutY="180.0" prefHeight="120.0" prefWidth="80.0" rotate="270.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #003300; -fx-border-color: black;" />
             <Label layoutX="14.0" layoutY="20.0" text="Barcelona" />
             <Label layoutX="25.0" layoutY="89.0" text="200 $" />
          </children>
       </Pane>
-      <Pane layoutX="20.0" layoutY="100.0" prefHeight="120.0" prefWidth="80.0" rotate="270.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField21" layoutX="20.0" layoutY="100.0" prefHeight="120.0" prefWidth="80.0" rotate="270.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #003300; -fx-border-color: black;" />
             <Label layoutX="21.0" layoutY="20.0" text="Madryt" />
             <Label layoutX="25.0" layoutY="89.0" text="180 $" />
          </children>
       </Pane>
-      <Pane layoutX="20.0" layoutY="340.0" prefHeight="120.0" prefWidth="80.0" rotate="270.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField18" layoutX="20.0" layoutY="340.0" prefHeight="120.0" prefWidth="80.0" rotate="270.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #003300#6600cc; -fx-border-color: black;" />
             <Label layoutX="17.0" layoutY="20.0" text="Walencja" />
             <Label layoutX="25.0" layoutY="89.0" text="180 $" />
          </children>
       </Pane>
-      <Pane layoutX="200.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField24" layoutX="200.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: Brown; -fx-border-color: black;" />
             <Label layoutX="8.0" layoutY="20.0" text="Monachium" />
             <Label layoutX="25.0" layoutY="89.0" text="260 $" />
          </children>
       </Pane>
-      <Pane layoutX="280.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField25" layoutX="280.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: Brown; -fx-border-color: black;" />
             <Label layoutX="12.0" layoutY="20.0" text="Dortmund" />
             <Label layoutX="25.0" layoutY="89.0" text="260 $" />
          </children>
       </Pane>
-      <Pane layoutX="440.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField27" layoutX="440.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: Brown; -fx-border-color: black;" />
             <Label layoutX="25.0" layoutY="20.0" text="Berlin" />
             <Label layoutX="25.0" layoutY="89.0" text="280 $" />
          </children>
       </Pane>
-      <Pane layoutX="680.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField30" layoutX="680.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: Gray; -fx-border-color: black;" />
             <Label layoutX="25.0" layoutY="20.0" text="Turyn" />
             <Label layoutX="25.0" layoutY="89.0" text="220 $" />
          </children>
       </Pane>
-      <Pane layoutX="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField29" layoutX="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: Gray; -fx-border-color: black;" />
             <Label layoutX="21.0" layoutY="20.0" text="Neapol" />
             <Label layoutX="25.0" layoutY="89.0" text="220 $" />
          </children>
       </Pane>
-      <Pane layoutX="840.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField32" layoutX="840.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: Gray; -fx-border-color: black;" />
             <Label layoutX="26.0" layoutY="20.0" text="Rzym" />
             <Label layoutX="25.0" layoutY="89.0" text="240 $" />
          </children>
       </Pane>
-      <Pane layoutX="1180.0" layoutY="100.0" prefHeight="120.0" prefWidth="80.0" rotate="90.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField37" layoutX="1180.0" layoutY="100.0" prefHeight="120.0" prefWidth="80.0" rotate="90.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #990066; -fx-border-color: black;" />
             <Label layoutX="9.0" layoutY="20.0" text="Amsterdam" />
             <Label layoutX="25.0" layoutY="89.0" text="300 $" />
          </children>
       </Pane>
-      <Pane layoutX="1180.0" layoutY="180.0" prefHeight="120.0" prefWidth="80.0" rotate="90.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField38" layoutX="1180.0" layoutY="180.0" prefHeight="120.0" prefWidth="80.0" rotate="90.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #990066; -fx-border-color: black;" />
             <Label layoutX="17.0" layoutY="20.0" text="Bruksela" />
             <Label layoutX="25.0" layoutY="89.0" text="320 $" />
          </children>
       </Pane>
-      <Pane layoutX="1000.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField34" layoutX="1000.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #990066; -fx-border-color: black;" />
             <Label layoutX="11.0" layoutY="20.0" text="Rotterdam" />
             <Label layoutX="25.0" layoutY="89.0" text="300 $" />
          </children>
       </Pane>
-      <Pane layoutX="120.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField23" layoutX="120.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Label layoutX="19.0" layoutY="-18.0" prefHeight="138.0" prefWidth="41.0" text="?" textAlignment="CENTER" textFill="RED">
                <font>
@@ -180,7 +181,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="1000.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField3" layoutX="1000.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Label layoutX="19.0" layoutY="-18.0" prefHeight="138.0" prefWidth="41.0" text="?" textAlignment="CENTER" textFill="RED">
                <font>
@@ -189,7 +190,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="520.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField28" layoutX="520.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Label layoutX="19.0" layoutY="-18.0" prefHeight="138.0" prefWidth="41.0" text="?" textAlignment="CENTER" textFill="#000fff">
                <font>
@@ -198,7 +199,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="360.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField11" layoutX="360.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <Label layoutX="19.0" layoutY="-18.0" prefHeight="138.0" prefWidth="41.0" text="?" textAlignment="CENTER" textFill="#000fff">
                <font>
@@ -207,7 +208,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="20.0" layoutY="260.0" prefHeight="120.0" prefWidth="80.0" rotate="270.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField19" layoutX="20.0" layoutY="260.0" prefHeight="120.0" prefWidth="80.0" rotate="270.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <ImageView fitHeight="61.0" fitWidth="70.0" layoutX="6.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -217,7 +218,7 @@
             <Label layoutX="26.0" layoutY="89.0" text="200 $" />
          </children>
       </Pane>
-      <Pane layoutX="520.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField9" layoutX="520.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <ImageView fitHeight="61.0" fitWidth="70.0" layoutX="6.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -227,7 +228,7 @@
             <Label layoutX="26.0" layoutY="89.0" text="200 $" />
          </children>
       </Pane>
-      <Pane layoutX="760.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField31" layoutX="760.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <ImageView fitHeight="61.0" fitWidth="70.0" layoutX="6.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -237,7 +238,7 @@
             <Label layoutX="26.0" layoutY="89.0" text="200 $" />
          </children>
       </Pane>
-      <Pane layoutX="1180.0" layoutY="260.0" prefHeight="120.0" prefWidth="80.0" rotate="90.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField39" layoutX="1180.0" layoutY="260.0" prefHeight="120.0" prefWidth="80.0" rotate="90.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <ImageView fitHeight="61.0" fitWidth="70.0" layoutX="6.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -247,7 +248,7 @@
             <Label layoutX="26.0" layoutY="89.0" text="200 $" />
          </children>
       </Pane>
-      <Pane layoutX="1180.0" layoutY="420.0" prefHeight="120.0" prefWidth="80.0" rotate="90.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField41" layoutX="1180.0" layoutY="420.0" prefHeight="120.0" prefWidth="80.0" rotate="90.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <ImageView fitHeight="52.0" fitWidth="80.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -257,7 +258,7 @@
             <Label layoutX="14.0" layoutY="89.0" text="Pay 200 $" />
          </children>
       </Pane>
-      <Pane layoutX="20.0" layoutY="420.0" prefHeight="120.0" prefWidth="80.0" rotate="270.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField17" layoutX="20.0" layoutY="420.0" prefHeight="120.0" prefWidth="80.0" rotate="270.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <ImageView fitHeight="52.0" fitWidth="80.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -267,7 +268,7 @@
             <Label layoutX="25.0" layoutY="89.0" text="150 $" />
          </children>
       </Pane>
-      <Pane layoutX="920.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField33" layoutX="920.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <ImageView fitHeight="52.0" fitWidth="80.0" layoutX="9.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -277,7 +278,7 @@
             <Label layoutX="25.0" layoutY="89.0" text="150 $" />
          </children>
       </Pane>
-      <Pane layoutX="760.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField6" layoutX="760.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <ImageView fitHeight="61.0" fitWidth="70.0" layoutX="9.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -287,7 +288,7 @@
             <Label layoutX="14.0" layoutY="89.0" text="Get 100 $" />
          </children>
       </Pane>
-      <Pane layoutX="1080.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField35" layoutX="1080.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <ImageView fitHeight="61.0" fitWidth="70.0" layoutX="5.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -298,7 +299,7 @@
             <Label layoutX="19.0" layoutY="6.0" text="Prawnik" />
          </children>
       </Pane>
-      <Pane layoutX="360.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField26" layoutX="360.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <ImageView fitHeight="61.0" fitWidth="70.0" layoutX="10.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -309,7 +310,7 @@
             <Label layoutX="11.0" layoutY="6.0" text="Informatyk" />
          </children>
       </Pane>
-      <Pane layoutX="840.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField5" layoutX="840.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <ImageView fitHeight="61.0" fitWidth="70.0" layoutX="15.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -320,7 +321,7 @@
             <Label layoutX="22.0" layoutY="6.0" text="Doktor" />
          </children>
       </Pane>
-      <Pane layoutX="120.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
+      <Pane fx:id="paneField14" layoutX="120.0" layoutY="600.0" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
             <ImageView fitHeight="61.0" fitWidth="61.0" layoutX="9.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -331,7 +332,7 @@
             <Label layoutX="11.0" layoutY="6.0" text="Zwolnienie" textFill="RED" />
          </children>
       </Pane>
-      <Pane prefHeight="120.0" prefWidth="120.0" style="-fx-border-color: black; -fx-background-color: white;">
+      <Pane fx:id="paneField22" prefHeight="120.0" prefWidth="120.0" style="-fx-border-color: black; -fx-background-color: white;">
          <children>
             <ImageView fitHeight="80.0" fitWidth="89.0" layoutX="20.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -341,7 +342,7 @@
             <Label layoutX="13.0" layoutY="6.0" text="Darmowy parking" />
          </children>
       </Pane>
-      <Pane layoutY="600.0" prefHeight="120.0" prefWidth="120.0" style="-fx-border-color: black; -fx-background-color: white;">
+      <Pane fx:id="paneField15" layoutY="600.0" prefHeight="120.0" prefWidth="120.0" style="-fx-border-color: black; -fx-background-color: white;">
          <children>
             <ImageView fitHeight="70.0" fitWidth="89.0" layoutX="20.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -352,7 +353,7 @@
             <Label layoutX="35.0" layoutY="6.0" text="Więzienie" />
          </children>
       </Pane>
-      <Pane layoutX="1160.0" prefHeight="120.0" prefWidth="120.0" style="-fx-border-color: black; -fx-background-color: white;">
+      <Pane fx:id="paneField36" layoutX="1160.0" prefHeight="120.0" prefWidth="120.0" style="-fx-border-color: black; -fx-background-color: white;">
          <children>
             <Label layoutX="8.0" layoutY="60.0" prefHeight="51.0" prefWidth="104.0" text="Zachorowałes. Czekasz 1 kolejkę i płacisz 50 $" textAlignment="CENTER" wrapText="true" />
             <ImageView fitHeight="51.0" fitWidth="46.0" layoutX="37.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
@@ -362,7 +363,7 @@
             </ImageView>
          </children>
       </Pane>
-      <Pane layoutX="1160.0" layoutY="600.0" prefHeight="120.0" prefWidth="120.0" style="-fx-border-color: black; -fx-background-color: white;">
+      <Pane fx:id="paneField1" layoutX="1160.0" layoutY="600.0" prefHeight="120.0" prefWidth="120.0" style="-fx-border-color: black; -fx-background-color: white;">
          <children>
             <Label layoutX="26.0" layoutY="8.0" text="Start" textFill="RED">
                <font>
@@ -410,5 +411,6 @@
             <Label fx:id="labelComputer3" layoutX="120.0" layoutY="16.0" prefHeight="17.0" prefWidth="70.0" text="stan konta" />
          </children>
       </Pane>
+      <Button layoutX="1014.0" layoutY="530.0" mnemonicParsing="false" onAction="#usunAction" text="Usuń gracza" />
    </children>
 </AnchorPane>

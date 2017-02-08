@@ -5,6 +5,8 @@ package player;
  */
 public interface IPlayer {
 
+    void startPosition();
+
     void throwDice();
 
     void purchaseCard();
@@ -14,4 +16,8 @@ public interface IPlayer {
     void expansionCard();
 
     void saleCard();
+
+    void positionPlayer();
+
+    void movePlayer();
 }

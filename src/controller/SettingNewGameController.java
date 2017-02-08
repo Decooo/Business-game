@@ -1,6 +1,5 @@
 package controller;
 
-import game.Game;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

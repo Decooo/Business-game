@@ -8,11 +8,16 @@ import java.util.Random;
  * Created by Jakub on 07.02.2017.
  */
 public class DetermineOrderTrowing {
-    private int numerOfPlayers = SettingNewGameController.getSelectedNumberOfPlayer();
+    private static int numberOfPlayers = SettingNewGameController.getSelectedNumberOfPlayer();
+    static int[] orderTrowing = new int[numberOfPlayers];
+
+    public static int returnOrderTrowingPlayer(int index) {
+        return orderTrowing[index];
+    }
+
     public int[] determineOrderTrowing() {
         Random rand = new Random();
-        int[] orderTrowing = new int[numerOfPlayers];
-        int[] temp = new int[numerOfPlayers];
+        int[] temp = new int[numberOfPlayers];
 
         for (int i = 0; i < temp.length; i++) {
             temp[i] = i;
@@ -21,7 +26,7 @@ public class DetermineOrderTrowing {
         for (int i = 0; i < orderTrowing.length; i++) {
             int elem = rand.nextInt(j);
             orderTrowing[i] = temp[elem];
-            temp[elem] = temp[temp.length - 1];
+            temp[elem] = temp[j - 1];
             j--;
         }
         return orderTrowing;
