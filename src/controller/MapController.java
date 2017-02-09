@@ -9,7 +9,9 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Ellipse;
+import player.ComputerPlayer;
 import player.ListPlayers;
+import player.Player;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -25,6 +27,17 @@ public class MapController implements Initializable {
     final static String playerName = getPlayerName();
 
     static List<Pane> listPaneField = new ArrayList<>(42);
+
+    public int[] getOrderTrowing() {
+        return orderTrowing;
+    }
+
+    public MapController setOrderTrowing(int[] orderTrowing) {
+        this.orderTrowing = orderTrowing;
+        return this;
+    }
+
+    private static int[] orderTrowing;
 
     @FXML
     private Label labelPlayer;
@@ -131,18 +144,19 @@ public class MapController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
-
         doListPaneField();
         labelPlayer.setText(playerName + ": " + startingAmountOfMoney);
-
         displayPlayers(numberOfPlayers);
 
         DetermineOrderTrowing drawOrder = new DetermineOrderTrowing();
-        drawOrder.determineOrderTrowing();
+        orderTrowing = drawOrder.determineOrderTrowing();
 
         ListPlayers listPlayers = new ListPlayers();
         listPlayers.doListPlayer();
+
+        DrawPane draw = new DrawPane();
+        draw.drawPawnAtTheStart();
+
 
     }
 
@@ -164,16 +178,17 @@ public class MapController implements Initializable {
         ListPlayers list = new ListPlayers();
         list.printListPlayer();
 
-        DrawPane d = new DrawPane();
-        d.drawPawn();
+
 
 
     }
 
-    public void drawPane(Pane pane, Color c) {
-        Ellipse kolo = new Ellipse(10, 15, 10, 10);
-        kolo.setFill(c);
-        pane.getChildren().add(kolo);
+    public void drawPane(Pane pane, Color c, double centerX, double centerY) {
+        Ellipse ellipse = new Ellipse(centerX, centerY, 10, 10);
+        ellipse.setFill(c);
+        ellipse.setStroke(Color.BLACK);
+        ellipse.setStrokeWidth(1);
+        pane.getChildren().add(ellipse);
 
     }
 
