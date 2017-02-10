@@ -10,12 +10,10 @@ public class Player implements IPlayer {
 
     private int positionPlayer;
     private int amountMoney;
-    private int orderThrowingDice;
 
     public Player() {
         setPositionPlayer(1);
         setAmuontMoney(SettingNewGameController.getSelectedAmountOfMoney());
-        setOrderThrowingDice(OrderTrowing.getOrderTrowingPlayer(0));
     }
 
     @Override
@@ -23,18 +21,9 @@ public class Player implements IPlayer {
         return "Player{" +
                 "positionPlayer=" + positionPlayer +
                 ", amountMoney=" + amountMoney +
-                ", orderThrowingDice=" + orderThrowingDice +
                 '}';
     }
 
-    public int getOrderThrowingDice() {
-        return orderThrowingDice;
-    }
-
-    public Player setOrderThrowingDice(int orderCastingDice) {
-        this.orderThrowingDice = orderCastingDice;
-        return this;
-    }
 
     public int getAmuontMoney() {
         return amountMoney;

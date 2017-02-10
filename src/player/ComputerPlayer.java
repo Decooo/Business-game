@@ -11,13 +11,11 @@ public class ComputerPlayer implements IPlayer {
     private static int numberComputerPlayer = 0;
     private int positionComputerPlayer;
     private int amountMoney;
-    private int orderThrowingDice;
 
     public ComputerPlayer() {
         numberComputerPlayer++;
         setPositionComputerPlayer(1);
         setAmountMoney(SettingNewGameController.getSelectedAmountOfMoney());
-        setOrderThrowingDice(OrderTrowing.getOrderTrowingPlayer(numberComputerPlayer));
     }
 
     @Override
@@ -25,7 +23,6 @@ public class ComputerPlayer implements IPlayer {
         return "ComputerPlayer{" +
                 "positionComputerPlayer=" + positionComputerPlayer +
                 ", amountMoney=" + amountMoney +
-                ", orderThrowingDice=" + orderThrowingDice +
                 '}';
     }
 
@@ -46,15 +43,6 @@ public class ComputerPlayer implements IPlayer {
         return this;
     }
 
-    public int getOrderThrowingDice() {
-        return orderThrowingDice;
-    }
-
-
-    public ComputerPlayer setOrderThrowingDice(int orderCastingDice) {
-        this.orderThrowingDice = orderCastingDice;
-        return this;
-    }
 
     public int getPositionComputerPlayer() {
         return positionComputerPlayer;

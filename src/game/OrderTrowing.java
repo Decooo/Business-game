@@ -61,7 +61,20 @@ public class OrderTrowing {
         determineOrderTrowing();
     }
 
-    public void updateOrderTrowing() {
+    public void updateOrderTrowing(int idPlayerWhoTrow) {
+        if (orderTrowing[idPlayerWhoTrow] > 0) {
+            int value = orderTrowing[idPlayerWhoTrow];
+            for (int i = 0; i < orderTrowing.length; i++) {
+                orderTrowing[i] -= value;
+            }
+        }
+
+        orderTrowing[idPlayerWhoTrow]+=orderTrowing.length-1;
+        for (int i = 0; i <orderTrowing.length ; i++) {
+            if(i!=idPlayerWhoTrow){
+                orderTrowing[i] -=1;
+            }
+        }
 
     }
 

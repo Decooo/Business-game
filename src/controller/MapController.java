@@ -165,24 +165,18 @@ public class MapController implements Initializable {
     @FXML
     private void nextPlayerAction(ActionEvent event) {
         int idPlayerWhoTrows;
-        ListPlayers list = new ListPlayers();
-        //test list player
-        list.printListPlayer();
-
         ThrowDice throwDice = new ThrowDice();
         OrderTrowing orderTrowing = new OrderTrowing();
         DrawPawn drawPawn = new DrawPawn();
+        ListPlayers list = new ListPlayers();
+
+        list.printListPlayer();
+
         idPlayerWhoTrows = orderTrowing.idPlayerWhoTrows();
-
-        //test clear old pawn
         drawPawn.removeOldPawn(idPlayerWhoTrows);
-
-        //end test
-
         list.updatePositionPlayer(idPlayerWhoTrows, throwDice.randomNumberONTheDice());
-        System.out.println(idPlayerWhoTrows);
         drawPawn.drawPawn(idPlayerWhoTrows);
-
+        orderTrowing.updateOrderTrowing(idPlayerWhoTrows);
     }
 
     public void drawPane(Pane pane, Color c, double centerX, double centerY, int idPlayer) {
