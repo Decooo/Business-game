@@ -1,7 +1,8 @@
 package controller;
 
-import game.DetermineOrderTrowing;
-import game.DrawPane;
+import game.DrawPawn;
+import game.OrderTrowing;
+import game.ThrowDice;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -9,9 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Ellipse;
-import player.ComputerPlayer;
 import player.ListPlayers;
-import player.Player;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -28,16 +27,6 @@ public class MapController implements Initializable {
 
     static List<Pane> listPaneField = new ArrayList<>(42);
 
-    public int[] getOrderTrowing() {
-        return orderTrowing;
-    }
-
-    public MapController setOrderTrowing(int[] orderTrowing) {
-        this.orderTrowing = orderTrowing;
-        return this;
-    }
-
-    private static int[] orderTrowing;
 
     @FXML
     private Label labelPlayer;
@@ -148,13 +137,13 @@ public class MapController implements Initializable {
         labelPlayer.setText(playerName + ": " + startingAmountOfMoney);
         displayPlayers(numberOfPlayers);
 
-        DetermineOrderTrowing drawOrder = new DetermineOrderTrowing();
-        orderTrowing = drawOrder.determineOrderTrowing();
+        OrderTrowing drawOrder = new OrderTrowing();
+        drawOrder.doDetermineOrderTrowing();
 
         ListPlayers listPlayers = new ListPlayers();
         listPlayers.doListPlayer();
 
-        DrawPane draw = new DrawPane();
+        DrawPawn draw = new DrawPawn();
         draw.drawPawnAtTheStart();
 
 
@@ -174,22 +163,35 @@ public class MapController implements Initializable {
     }
 
     @FXML
-    private void usunAction(ActionEvent event) {
+    private void nextPlayerAction(ActionEvent event) {
+        int idPlayerWhoTrows;
         ListPlayers list = new ListPlayers();
+        //test list player
         list.printListPlayer();
 
+        ThrowDice throwDice = new ThrowDice();
+        OrderTrowing orderTrowing = new OrderTrowing();
+        DrawPawn drawPawn = new DrawPawn();
+        idPlayerWhoTrows = orderTrowing.idPlayerWhoTrows();
 
+        //test clear old pawn
+        drawPawn.removeOldPawn(idPlayerWhoTrows);
 
+        //end test
+
+        list.updatePositionPlayer(idPlayerWhoTrows, throwDice.randomNumberONTheDice());
+        System.out.println(idPlayerWhoTrows);
+        drawPawn.drawPawn(idPlayerWhoTrows);
 
     }
 
-    public void drawPane(Pane pane, Color c, double centerX, double centerY) {
+    public void drawPane(Pane pane, Color c, double centerX, double centerY, int idPlayer) {
         Ellipse ellipse = new Ellipse(centerX, centerY, 10, 10);
         ellipse.setFill(c);
         ellipse.setStroke(Color.BLACK);
         ellipse.setStrokeWidth(1);
+        ellipse.setId("player" + idPlayer);
         pane.getChildren().add(ellipse);
-
     }
 
 

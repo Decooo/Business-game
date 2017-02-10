@@ -1,7 +1,7 @@
 package player;
 
 import controller.SettingNewGameController;
-import game.DetermineOrderTrowing;
+import game.OrderTrowing;
 
 /**
  * Created by Jakub on 08.02.2017.
@@ -10,12 +10,12 @@ public class Player implements IPlayer {
 
     private int positionPlayer;
     private int amountMoney;
-    private int orderCastingDice;
+    private int orderThrowingDice;
 
     public Player() {
         setPositionPlayer(1);
         setAmuontMoney(SettingNewGameController.getSelectedAmountOfMoney());
-        setOrderCastingDice(DetermineOrderTrowing.returnOrderTrowingPlayer(0));
+        setOrderThrowingDice(OrderTrowing.getOrderTrowingPlayer(0));
     }
 
     @Override
@@ -23,16 +23,16 @@ public class Player implements IPlayer {
         return "Player{" +
                 "positionPlayer=" + positionPlayer +
                 ", amountMoney=" + amountMoney +
-                ", orderCastingDice=" + orderCastingDice +
+                ", orderThrowingDice=" + orderThrowingDice +
                 '}';
     }
 
-    public int getOrderCastingDice() {
-        return orderCastingDice;
+    public int getOrderThrowingDice() {
+        return orderThrowingDice;
     }
 
-    public Player setOrderCastingDice(int orderCastingDice) {
-        this.orderCastingDice = orderCastingDice;
+    public Player setOrderThrowingDice(int orderCastingDice) {
+        this.orderThrowingDice = orderCastingDice;
         return this;
     }
 

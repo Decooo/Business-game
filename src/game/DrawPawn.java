@@ -9,7 +9,7 @@ import player.Player;
 /**
  * Created by Jakub on 08.02.2017.
  */
-public class DrawPane {
+public class DrawPawn {
 
     private static double centerX = 0;
     private static double centerY = 0;
@@ -18,24 +18,24 @@ public class DrawPane {
 
     public void drawPawnAtTheStart() {
         MapController map = new MapController();
-        int[] order = map.getOrderTrowing();
+        OrderTrowing order = new OrderTrowing();
 
 
-        for (int i = 0; i < order.length; i++) {
-            int numberPawn = order[i];
-            centerPawn(numberPawn+1, 120, 120);
+        for (int i = 0; i < listPlayers.sizeListPlayers(); i++) {
+            int numberPawn = OrderTrowing.getOrderTrowingPlayer(i);
+            centerPawn(numberPawn + 1, 120, 120);
             if (i == 0) {
                 Color c = Color.BLUE;
-                map.drawPane(map.getPaneField(0), c, centerX, centerY);
+                map.drawPane(map.getPaneField(0), c, centerX, centerY,i);
             } else if (i == 1) {
                 Color c = Color.RED;
-                map.drawPane(map.getPaneField(0), c, centerX, centerY);
+                map.drawPane(map.getPaneField(0), c, centerX, centerY,i);
             } else if (i == 2) {
                 Color c = Color.GREEN;
-                map.drawPane(map.getPaneField(0), c, centerX, centerY);
+                map.drawPane(map.getPaneField(0), c, centerX, centerY,i);
             } else if (i == 3) {
                 Color c = Color.YELLOW;
-                map.drawPane(map.getPaneField(0), c, centerX, centerY);
+                map.drawPane(map.getPaneField(0), c, centerX, centerY,i);
             }
         }
     }
@@ -63,7 +63,7 @@ public class DrawPane {
         double width = map.getPaneField(positionPlayer - 1).getWidth();
         double height = map.getPaneField(positionPlayer - 1).getHeight();
         numberPawnField(positionPlayer, width, height);
-        map.drawPane(map.getPaneField(positionPlayer - 1), c, centerX, centerY);
+        map.drawPane(map.getPaneField(positionPlayer - 1), c, centerX, centerY,i);
     }
 
     public void drawComputerPawn(int i, Color c) {
@@ -73,7 +73,7 @@ public class DrawPane {
         double width = map.getPaneField(positionComputerPlayer - 1).getWidth();
         double height = map.getPaneField(positionComputerPlayer - 1).getHeight();
         numberPawnField(positionComputerPlayer, width, height);
-        map.drawPane(map.getPaneField(positionComputerPlayer - 1), c, centerX, centerY);
+        map.drawPane(map.getPaneField(positionComputerPlayer - 1), c, centerX, centerY,i);
     }
 
     public void numberPawnField(int position, double width, double height) {
@@ -94,6 +94,18 @@ public class DrawPane {
             }
         }
         centerPawn(numberPawn, width, height);
+    }
+
+    public void removeOldPawn(int idPlayer) {
+        int oldPosition = listPlayers.getOldPosition(idPlayer);
+        MapController map = new MapController();
+        String idPawn = "player" + idPlayer;
+        for (int i = 0; i < map.getPaneField(oldPosition - 1).getChildren().size(); i++) {
+            String nameItem = map.getPaneField(oldPosition - 1).getChildren().get(i).getId();
+            if (idPawn.equals(nameItem)) {
+                map.getPaneField(oldPosition - 1).getChildren().remove(i);
+            }
+        }
     }
 
     public void centerPawn(int numberPawn, double width, double height) {

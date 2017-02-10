@@ -1,7 +1,7 @@
 package player;
 
 import controller.SettingNewGameController;
-import game.DetermineOrderTrowing;
+import game.OrderTrowing;
 
 /**
  * Created by Jakub on 08.02.2017.
@@ -11,13 +11,13 @@ public class ComputerPlayer implements IPlayer {
     private static int numberComputerPlayer = 0;
     private int positionComputerPlayer;
     private int amountMoney;
-    private int orderCastingDice;
+    private int orderThrowingDice;
 
     public ComputerPlayer() {
         numberComputerPlayer++;
         setPositionComputerPlayer(1);
         setAmountMoney(SettingNewGameController.getSelectedAmountOfMoney());
-        setOrderCastingDice(DetermineOrderTrowing.returnOrderTrowingPlayer(numberComputerPlayer));
+        setOrderThrowingDice(OrderTrowing.getOrderTrowingPlayer(numberComputerPlayer));
     }
 
     @Override
@@ -25,7 +25,7 @@ public class ComputerPlayer implements IPlayer {
         return "ComputerPlayer{" +
                 "positionComputerPlayer=" + positionComputerPlayer +
                 ", amountMoney=" + amountMoney +
-                ", orderCastingDice=" + orderCastingDice +
+                ", orderThrowingDice=" + orderThrowingDice +
                 '}';
     }
 
@@ -46,12 +46,13 @@ public class ComputerPlayer implements IPlayer {
         return this;
     }
 
-    public int getOrderCastingDice() {
-        return orderCastingDice;
+    public int getOrderThrowingDice() {
+        return orderThrowingDice;
     }
 
-    public ComputerPlayer setOrderCastingDice(int orderCastingDice) {
-        this.orderCastingDice = orderCastingDice;
+
+    public ComputerPlayer setOrderThrowingDice(int orderCastingDice) {
+        this.orderThrowingDice = orderCastingDice;
         return this;
     }
 

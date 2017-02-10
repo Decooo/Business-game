@@ -411,6 +411,6 @@
             <Label fx:id="labelComputer3" layoutX="120.0" layoutY="16.0" prefHeight="17.0" prefWidth="70.0" text="stan konta" />
          </children>
       </Pane>
-      <Button layoutX="1014.0" layoutY="530.0" mnemonicParsing="false" onAction="#usunAction" text="Usuń gracza" />
+      <Button layoutX="1014.0" layoutY="530.0" mnemonicParsing="false" onAction="#nextPlayerAction" text="Następny gracz" />
    </children>
 </AnchorPane>
