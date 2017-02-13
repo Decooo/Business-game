@@ -11,7 +11,8 @@ public class InitializeListCards {
         ListProfessionCard listProfessionCard = new ListProfessionCard();
         ListArchitectureCard listArchitectureCard = new ListArchitectureCard();
         ListSpecialCard listSpecialCard = new ListSpecialCard();
-        ListCard listCard =new ListCard();
+        ListCard listCard = new ListCard();
+        CardIndexesInLists cardIndexesInLists = new CardIndexesInLists();
 
         listCityCard.doListCityCard();
         listLocomotiveCard.doListLocomotiveCard();
@@ -19,6 +20,7 @@ public class InitializeListCards {
         listArchitectureCard.doListArchitectureCard();
         listSpecialCard.doListSpecialCard();
         listCard.doListCard();
+        cardIndexesInLists.doListCardIndexesInList();
     }
 
 

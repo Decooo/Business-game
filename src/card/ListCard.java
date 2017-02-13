@@ -5,7 +5,7 @@ package card;
  */
 public class ListCard {
 
-    private static Object[] listCard = new ListCard[5];
+    private static Object[] listCard = new Object[5];
 
     public static Object[] getListCard() {
         return listCard;

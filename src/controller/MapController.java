@@ -13,6 +13,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Ellipse;
+import player.ActionPlayerAfterMove;
 import player.ComputerPlayer;
 import player.ListPlayers;
 import player.Player;
@@ -201,11 +202,13 @@ public class MapController implements Initializable {
             drawPawn.drawPawn(idPlayerWhoTrows);
             orderTrowing.updateOrderTrowing(idPlayerWhoTrows);
         }
+        refreshLabel();
     }
 
     @FXML
     private void throwDiceAction() {
         int idPlayer = 0;
+        ActionPlayerAfterMove actionPlayerAfterMove = new ActionPlayerAfterMove();
         DrawPawn drawPawn = new DrawPawn();
         ListPlayers listPlayers = new ListPlayers();
         ThrowDice throwDice = new ThrowDice();
@@ -214,9 +217,11 @@ public class MapController implements Initializable {
         listPlayers.updatePositionPlayer(idPlayer, throwDice.randomNumberONTheDice());
         drawPawn.drawPawn(idPlayer);
         orderTrowing.updateOrderTrowing(idPlayer);
+        actionPlayerAfterMove.doAction(idPlayer);
 
         movePlayer = false;
         disableButtonWhenMoveComputerPlayer();
+        refreshLabel();
     }
 
     @FXML

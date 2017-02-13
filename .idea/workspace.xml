@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/card/ArchitectureCard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/card/InitializeListCards.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/card/ListArchitectureCard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/card/ListCard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/card/ListLocomotiveCard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/card/ListProfessionCard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/card/ListSpecialCard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/card/LocomotiveCard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/card/ProfessionCard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/card/SpecialCard.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/card/CardIndexesInLists.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/player/ActionAfterMove.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/player/ActionPlayerAfterMove.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/player/IActionAfterMove.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Business game/controller/MapController.class" afterPath="$PROJECT_DIR$/out/production/Business game/controller/MapController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/card/CityCard.java" afterPath="$PROJECT_DIR$/src/card/CityCard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/card/ListCityCard.java" afterPath="$PROJECT_DIR$/src/card/ListCityCard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/card/InitializeListCards.java" afterPath="$PROJECT_DIR$/src/card/InitializeListCards.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/card/ListCard.java" afterPath="$PROJECT_DIR$/src/card/ListCard.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/MapController.java" afterPath="$PROJECT_DIR$/src/controller/MapController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -89,33 +83,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ListProfessionCard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/card/ListProfessionCard.java">
+      <file leaf-file-name="ListPlayers.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/player/ListPlayers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="60" lean-forward="false" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
-              <folding>
-                <element signature="e#229#230#0" expanded="true" />
-                <element signature="e#277#278#0" expanded="true" />
-                <element signature="e#380#381#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LocomotiveCard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/card/LocomotiveCard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding>
-                <element signature="e#762#763#0" expanded="true" />
-                <element signature="e#792#793#0" expanded="true" />
-                <element signature="e#830#831#0" expanded="true" />
-                <element signature="e#864#865#0" expanded="true" />
-                <element signature="e#896#897#0" expanded="true" />
-                <element signature="e#925#926#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="408">
+              <caret line="47" column="11" lean-forward="false" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,8 +96,8 @@
       <file leaf-file-name="MapController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/MapController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="163" column="50" lean-forward="false" selection-start-line="163" selection-start-column="50" selection-end-line="163" selection-end-column="50" />
+            <state relative-caret-position="298">
+              <caret line="219" column="47" lean-forward="false" selection-start-line="219" selection-start-column="47" selection-end-line="219" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#doListPaneField#0;class#MapController#0" expanded="false" />
@@ -133,99 +106,64 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListLocomotiveCard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/card/ListLocomotiveCard.java">
+      <file leaf-file-name="IActionAfterMove.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/player/IActionAfterMove.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="61" lean-forward="false" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
-              <folding>
-                <element signature="e#230#231#0" expanded="true" />
-                <element signature="e#279#280#0" expanded="true" />
-                <element signature="e#608#609#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InitializeListCards.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/card/InitializeListCards.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListCard.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/card/ListCard.java">
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/player/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-              <folding>
-                <element signature="e#181#182#0" expanded="true" />
-                <element signature="e#212#213#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArchitectureCard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/card/ArchitectureCard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="53" lean-forward="false" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-              <folding>
-                <element signature="e#772#773#0" expanded="true" />
-                <element signature="e#800#801#0" expanded="true" />
-                <element signature="e#831#832#0" expanded="true" />
-                <element signature="e#858#859#0" expanded="true" />
-                <element signature="e#890#891#0" expanded="true" />
-                <element signature="e#919#920#0" expanded="true" />
-                <element signature="e#950#951#0" expanded="true" />
-                <element signature="e#980#981#0" expanded="true" />
-                <element signature="e#1018#1019#0" expanded="true" />
-                <element signature="e#1052#1053#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListArchitectureCard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/card/ListArchitectureCard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="65" lean-forward="false" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
-              <folding>
-                <element signature="e#247#248#0" expanded="true" />
-                <element signature="e#298#299#0" expanded="true" />
-                <element signature="e#409#410#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpecialCard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/card/SpecialCard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="519">
+              <caret line="81" column="16" lean-forward="false" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListSpecialCard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/card/ListSpecialCard.java">
+      <file leaf-file-name="IPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/player/IPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActionPlayerAfterMove.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/player/ActionPlayerAfterMove.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="740">
+              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding>
-                <element signature="e#223#224#0" expanded="true" />
-                <element signature="e#268#269#0" expanded="true" />
-                <element signature="e#324#325#0" expanded="true" />
-                <element signature="e#362#363#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListCityCard.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/card/ListCityCard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="536">
+              <caret line="46" column="14" lean-forward="false" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActionAfterMove.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/player/ActionAfterMove.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -285,7 +223,6 @@
         <option value="$PROJECT_DIR$/src/player/CurrentNumberOfPlayers.java" />
         <option value="$PROJECT_DIR$/src/game/ThrowDice.java" />
         <option value="$PROJECT_DIR$/src/game/DrawPane.java" />
-        <option value="$PROJECT_DIR$/src/player/ListPlayers.java" />
         <option value="$PROJECT_DIR$/src/game/ColorPlayer.java" />
         <option value="$PROJECT_DIR$/src/player/ComputerPlayer.java" />
         <option value="$PROJECT_DIR$/src/game/OrderTrowing.java" />
@@ -298,16 +235,21 @@
         <option value="$PROJECT_DIR$/src/card/ListCityCard.java" />
         <option value="$PROJECT_DIR$/src/card/CityCard.java" />
         <option value="$PROJECT_DIR$/src/card/LocomotiveCard.java" />
-        <option value="$PROJECT_DIR$/src/controller/MapController.java" />
         <option value="$PROJECT_DIR$/src/card/ProfessionCard.java" />
         <option value="$PROJECT_DIR$/src/card/ArchitectureCard.java" />
         <option value="$PROJECT_DIR$/src/card/SpecialCard.java" />
-        <option value="$PROJECT_DIR$/src/card/InitializeListCards.java" />
         <option value="$PROJECT_DIR$/src/card/ListLocomotiveCard.java" />
         <option value="$PROJECT_DIR$/src/card/ListProfessionCard.java" />
         <option value="$PROJECT_DIR$/src/card/ListArchitectureCard.java" />
         <option value="$PROJECT_DIR$/src/card/ListSpecialCard.java" />
+        <option value="$PROJECT_DIR$/src/card/InitializeListCards.java" />
         <option value="$PROJECT_DIR$/src/card/ListCard.java" />
+        <option value="$PROJECT_DIR$/src/card/CardIndexesInLists.java" />
+        <option value="$PROJECT_DIR$/src/player/ListPlayers.java" />
+        <option value="$PROJECT_DIR$/src/controller/MapController.java" />
+        <option value="$PROJECT_DIR$/src/player/IActionAfterMove.java" />
+        <option value="$PROJECT_DIR$/src/player/ActionAfterMove.java" />
+        <option value="$PROJECT_DIR$/src/player/ActionPlayerAfterMove.java" />
       </list>
     </option>
   </component>
@@ -373,10 +315,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -393,20 +331,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="player" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Business game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Business game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -486,7 +410,7 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/GitHub.appref-ms" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
+    <property name="settings.editor.selected.configurable" value="copyright" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -957,7 +881,7 @@
       <workItem from="1486640429142" duration="10685000" />
       <workItem from="1486724723032" duration="14057000" />
       <workItem from="1486922881804" duration="824000" />
-      <workItem from="1486980875091" duration="29262000" />
+      <workItem from="1486980875091" duration="35018000" />
     </task>
     <task id="LOCAL-00001" summary="Interface game">
       <created>1486466368837</created>
@@ -1022,11 +946,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487010771468</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="List all card">
+      <created>1487023491260</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1487023491260</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114016000" />
+    <option name="totallyTimeSpent" value="119772000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1051,7 +982,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23809524" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08874459" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19588745" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1146,7 +1077,8 @@
     <MESSAGE value="Draw pawn in the map V2" />
     <MESSAGE value="Update a order trowing" />
     <MESSAGE value="City card" />
-    <option name="LAST_COMMIT_MESSAGE" value="City card" />
+    <MESSAGE value="List all card" />
+    <option name="LAST_COMMIT_MESSAGE" value="List all card" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1162,27 +1094,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/view/Map2.java" />
-    <entry file="file://$PROJECT_DIR$/src/view/package-info.java" />
-    <entry file="file://$PROJECT_DIR$/src/view/Map.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/javafx-src.zip!/javafx/application/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="304" column="25" lean-forward="false" selection-start-line="304" selection-start-column="25" selection-end-line="304" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/MainMenu.java" />
     <entry file="file://$PROJECT_DIR$/src/controller/Conte.java" />
     <entry file="file://$PROJECT_DIR$/src/MainMenu.java" />
     <entry file="file://$PROJECT_DIR$/src/view/MainMenu.xsl" />
@@ -1349,14 +1260,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/player/IPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/Map.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -1365,35 +1268,6 @@
         <state relative-caret-position="2082">
           <caret line="407" column="104" lean-forward="false" selection-start-line="407" selection-start-column="104" selection-end-line="407" selection-end-column="104" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/player/ListPlayers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/player/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="848">
-          <caret line="61" column="23" lean-forward="false" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/card/ListCityCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="669">
-          <caret line="46" column="4" lean-forward="true" selection-start-line="46" selection-start-column="4" selection-end-line="48" selection-end-column="5" />
-          <folding>
-            <element signature="e#198#199#0" expanded="true" />
-            <element signature="e#233#234#0" expanded="true" />
-            <element signature="e#2926#2927#0" expanded="true" />
-            <element signature="e#2968#2969#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1445,37 +1319,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/MapController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="163" column="50" lean-forward="false" selection-start-line="163" selection-start-column="50" selection-end-line="163" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#doListPaneField#0;class#MapController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/card/ListLocomotiveCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="61" lean-forward="false" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
-          <folding>
-            <element signature="e#230#231#0" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/card/InitializeListCards.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/card/LocomotiveCard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1491,48 +1334,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/card/ListProfessionCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="60" lean-forward="false" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
-          <folding>
-            <element signature="e#229#230#0" expanded="true" />
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#380#381#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/card/ListSpecialCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#223#224#0" expanded="true" />
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/card/SpecialCard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/card/ListArchitectureCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="65" lean-forward="false" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
-          <folding>
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#409#410#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1555,13 +1361,138 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/card/ListLocomotiveCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="61" lean-forward="false" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
+          <folding>
+            <element signature="e#608#609#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/card/InitializeListCards.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/card/ListCard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="119">
+          <caret line="7" column="49" lean-forward="false" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/card/CardIndexesInLists.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1504">
+          <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/card/ListProfessionCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="60" lean-forward="false" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
           <folding>
-            <element signature="e#181#182#0" expanded="true" />
-            <element signature="e#212#213#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/card/ListSpecialCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/card/ListArchitectureCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="65" lean-forward="false" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
+          <folding>
+            <element signature="e#409#410#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/pawn.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/MapController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="219" column="47" lean-forward="false" selection-start-line="219" selection-start-column="47" selection-end-line="219" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#doListPaneField#0;class#MapController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player/IActionAfterMove.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="81" column="16" lean-forward="false" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player/IPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player/ListPlayers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="47" column="11" lean-forward="false" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player/ActionAfterMove.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/card/ListCityCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="46" column="14" lean-forward="false" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player/ActionPlayerAfterMove.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
