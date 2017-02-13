@@ -59,8 +59,8 @@ public class CityCard implements ICityCard {
         return this;
     }
 
-    public int[] getCharge() {
-        return charge;
+    public int getCharge(int index) {
+        return charge[index];
     }
 
     public int getColorCard() {

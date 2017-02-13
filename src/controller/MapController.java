@@ -1,5 +1,6 @@
 package controller;
 
+import card.InitializeListCards;
 import card.ListCityCard;
 import game.DrawPawn;
 import game.OrderTrowing;
@@ -159,8 +160,8 @@ public class MapController implements Initializable {
 
         refreshLabel();
 
-        ListCityCard listCityCard = new ListCityCard();
-        listCityCard.doListCityCard();
+        InitializeListCards initializeListCards = new InitializeListCards();
+        initializeListCards.initializeListCards();
 
         DrawPawn draw = new DrawPawn();
         draw.drawPawnAtTheStart();
