@@ -11,7 +11,7 @@ public interface IPlayer {
 
     void purchaseCard();
 
-    void replacmentCard();
+    void replacementCard();
 
     void expansionCard();
 

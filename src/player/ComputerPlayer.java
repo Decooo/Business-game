@@ -69,7 +69,7 @@ public class ComputerPlayer implements IPlayer {
     }
 
     @Override
-    public void replacmentCard() {
+    public void replacementCard() {
 
     }
 

@@ -16,5 +16,4 @@ public interface IGame {
 
     void loadGame();
 
-    void run();
 }

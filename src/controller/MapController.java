@@ -1,16 +1,20 @@
 package controller;
 
+import card.ListCityCard;
 import game.DrawPawn;
 import game.OrderTrowing;
 import game.ThrowDice;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Ellipse;
+import player.ComputerPlayer;
 import player.ListPlayers;
+import player.Player;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -24,7 +28,7 @@ public class MapController implements Initializable {
     final static int numberOfPlayers = getSelectedNumberOfPlayer();
     final static int startingAmountOfMoney = getSelectedAmountOfMoney();
     final static String playerName = getPlayerName();
-
+    static boolean movePlayer = false;
     static List<Pane> listPaneField = new ArrayList<>(42);
 
 
@@ -36,6 +40,17 @@ public class MapController implements Initializable {
     private Label labelComputer2;
     @FXML
     private Label labelComputer3;
+
+    @FXML
+    private Button btnNextPlayer;
+    @FXML
+    private Button btnExpansionCard;
+    @FXML
+    private Button btnReplacementCard;
+    @FXML
+    private Button btnThrowDice;
+    @FXML
+    private Button btnSaleCard;
 
     @FXML
     private Pane paneComputer1;
@@ -134,7 +149,6 @@ public class MapController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         doListPaneField();
-        labelPlayer.setText(playerName + ": " + startingAmountOfMoney);
         displayPlayers(numberOfPlayers);
 
         OrderTrowing drawOrder = new OrderTrowing();
@@ -143,10 +157,15 @@ public class MapController implements Initializable {
         ListPlayers listPlayers = new ListPlayers();
         listPlayers.doListPlayer();
 
+        refreshLabel();
+
+        ListCityCard listCityCard = new ListCityCard();
+        listCityCard.doListCityCard();
+
         DrawPawn draw = new DrawPawn();
         draw.drawPawnAtTheStart();
 
-
+        startDisableButton();
     }
 
     public void displayPlayers(int numberOfPlayers) {
@@ -170,13 +189,48 @@ public class MapController implements Initializable {
         DrawPawn drawPawn = new DrawPawn();
         ListPlayers list = new ListPlayers();
 
-        list.printListPlayer();
+        idPlayerWhoTrows = orderTrowing.idPlayerWhoTrows();
+        if (idPlayerWhoTrows == 0) {
+            disableButtonWhenMovePlayer();
+            movePlayer = true;
+        } else {
+            disableButtonWhenMoveComputerPlayer();
+            drawPawn.removeOldPawn(idPlayerWhoTrows);
+            list.updatePositionPlayer(idPlayerWhoTrows, throwDice.randomNumberONTheDice());
+            drawPawn.drawPawn(idPlayerWhoTrows);
+            orderTrowing.updateOrderTrowing(idPlayerWhoTrows);
+        }
+    }
 
+    @FXML
+    private void throwDiceAction() {
+        int idPlayer = 0;
+        DrawPawn drawPawn = new DrawPawn();
+        ListPlayers listPlayers = new ListPlayers();
+        ThrowDice throwDice = new ThrowDice();
+        OrderTrowing orderTrowing = new OrderTrowing();
+        drawPawn.removeOldPawn(idPlayer);
+        listPlayers.updatePositionPlayer(idPlayer, throwDice.randomNumberONTheDice());
+        drawPawn.drawPawn(idPlayer);
+        orderTrowing.updateOrderTrowing(idPlayer);
+
+        movePlayer = false;
+        disableButtonWhenMoveComputerPlayer();
+    }
+
+    @FXML
+    private void lostTwoQueuesAction() {
+        DrawPawn drawPawn = new DrawPawn();
+        ListPlayers list = new ListPlayers();
+        ThrowDice throwDice = new ThrowDice();
+
+        int idPlayerWhoTrows;
+        OrderTrowing orderTrowing = new OrderTrowing();
         idPlayerWhoTrows = orderTrowing.idPlayerWhoTrows();
         drawPawn.removeOldPawn(idPlayerWhoTrows);
         list.updatePositionPlayer(idPlayerWhoTrows, throwDice.randomNumberONTheDice());
         drawPawn.drawPawn(idPlayerWhoTrows);
-        orderTrowing.updateOrderTrowing(idPlayerWhoTrows);
+        orderTrowing.waitingNumberOfQueues(idPlayerWhoTrows, 2);
     }
 
     public void drawPane(Pane pane, Color c, double centerX, double centerY, int idPlayer) {
@@ -236,6 +290,50 @@ public class MapController implements Initializable {
         listPaneField.add(paneField40);
         listPaneField.add(paneField41);
         listPaneField.add(paneField42);
+    }
+
+    private void disableButtonWhenMoveComputerPlayer() {
+        btnNextPlayer.setDisable(false);
+        btnExpansionCard.setDisable(true);
+        btnReplacementCard.setDisable(true);
+        btnSaleCard.setDisable(true);
+        btnThrowDice.setDisable(true);
+    }
+
+    private void disableButtonWhenMovePlayer() {
+        btnNextPlayer.setDisable(true);
+        btnExpansionCard.setDisable(false);
+        btnReplacementCard.setDisable(false);
+        btnSaleCard.setDisable(false);
+        btnThrowDice.setDisable(false);
+    }
+
+    private void startDisableButton() {
+        OrderTrowing drawOrder = new OrderTrowing();
+        int idPlayerWhoTrows = drawOrder.idPlayerWhoTrows();
+        if (idPlayerWhoTrows == 0) {
+            disableButtonWhenMovePlayer();
+        } else disableButtonWhenMoveComputerPlayer();
+
+    }
+
+    private void refreshLabel() {
+        ListPlayers listPlayers = new ListPlayers();
+        for (int i = 0; i < listPlayers.sizeListPlayers(); i++) {
+            if (i == 0) {
+                Player play = (Player) listPlayers.getPlayer(i);
+                labelPlayer.setText(playerName + " :  " + play.getAmuontMoney());
+            } else if (i == 1) {
+                ComputerPlayer play = (ComputerPlayer) listPlayers.getPlayer(i);
+                labelComputer1.setText("Komputer czerwony : " + play.getAmountMoney());
+            } else if (i == 2) {
+                ComputerPlayer play = (ComputerPlayer) listPlayers.getPlayer(i);
+                labelComputer2.setText("Komputer zielony : " + play.getAmountMoney());
+            } else if (i == 3) {
+                ComputerPlayer play = (ComputerPlayer) listPlayers.getPlayer(i);
+                labelComputer3.setText("Komputer żółty : " + play.getAmountMoney());
+            }
+        }
     }
 
 }
