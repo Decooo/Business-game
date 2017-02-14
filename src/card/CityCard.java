@@ -3,7 +3,8 @@ package card;
 /**
  * Created by Jakub on 13.02.2017.
  */
-public class CityCard implements ICityCard {
+public class CityCard implements ICityCard  {
+
     private final int price;
     private final int costExpansion;
     private final int colorCard;

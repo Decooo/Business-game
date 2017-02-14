@@ -3,16 +3,16 @@ package card;
 /**
  * Created by Jakub on 13.02.2017.
  */
-public class ArchitectureCard {
+public class ArchitectureCard extends Card{
 
-    final int prize;
+   // final int prize;
     final String name;
     private int[] charge = new int[2];
     private int idOwner;
     private boolean depositCard;
 
     public ArchitectureCard(String name, int prize, int[] charge, int idOwner, boolean depositCard) {
-        this.prize = prize;
+        setPrize(prize);
         this.name = name;
         this.charge = charge;
         this.idOwner = idOwner;
@@ -29,9 +29,9 @@ public class ArchitectureCard {
         return this;
     }
 
-    public int getPrize() {
-        return prize;
-    }
+//    public int getPrize() {
+//        return prize;
+//    }
 
     public String getName() {
         return name;
