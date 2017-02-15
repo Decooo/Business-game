@@ -1,5 +1,6 @@
 package controller;
 
+import alert.AlertInformation;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -55,11 +56,7 @@ public class SettingNewGameController implements Initializable {
     @FXML
     private void startNewGameAction(ActionEvent event) throws IOException {
         if (textFieldPlayerName.getText().isEmpty()) {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Nazwa gracza");
-            alert.setHeaderText("");
-            alert.setContentText("Nazwa gracza nie może być pusta.");
-            alert.showAndWait();
+            AlertInformation.AlertEmptyPlayerName();
         } else {
             playerName = textFieldPlayerName.getText();
             String[] temp = amountOfMoney.getSelectedToggle().toString().split("'");

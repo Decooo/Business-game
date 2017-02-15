@@ -1,7 +1,6 @@
 package controller;
 
 import card.InitializeListCards;
-import card.ListCityCard;
 import game.DrawPawn;
 import game.OrderTrowing;
 import game.ThrowDice;
@@ -16,7 +15,7 @@ import javafx.scene.shape.Ellipse;
 import player.ActionPlayerAfterMove;
 import player.ComputerPlayer;
 import player.ListPlayers;
-import player.Player;
+import player.UserPlayer;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -32,8 +31,7 @@ public class MapController implements Initializable {
     final static String playerName = getPlayerName();
     static boolean movePlayer = false;
     static List<Pane> listPaneField = new ArrayList<>(42);
-
-
+    private static int numberOnTheDice;
     @FXML
     private Label labelPlayer;
     @FXML
@@ -42,7 +40,6 @@ public class MapController implements Initializable {
     private Label labelComputer2;
     @FXML
     private Label labelComputer3;
-
     @FXML
     private Button btnNextPlayer;
     @FXML
@@ -53,15 +50,12 @@ public class MapController implements Initializable {
     private Button btnThrowDice;
     @FXML
     private Button btnSaleCard;
-
     @FXML
     private Pane paneComputer1;
     @FXML
     private Pane paneComputer2;
     @FXML
     private Pane paneComputer3;
-
-
     @FXML
     private Pane paneField1;
     @FXML
@@ -147,6 +141,13 @@ public class MapController implements Initializable {
     @FXML
     private Pane paneField42;
 
+    public static int getNumberOnTheDice() {
+        return numberOnTheDice;
+    }
+
+    public static void setNumberOnTheDice(int numberOnTheDice) {
+        MapController.numberOnTheDice = numberOnTheDice;
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -198,7 +199,8 @@ public class MapController implements Initializable {
         } else {
             disableButtonWhenMoveComputerPlayer();
             drawPawn.removeOldPawn(idPlayerWhoTrows);
-            list.updatePositionPlayer(idPlayerWhoTrows, throwDice.randomNumberONTheDice());
+            setNumberOnTheDice(throwDice.randomNumberOnTheDice());
+            list.updatePositionPlayer(idPlayerWhoTrows, getNumberOnTheDice());
             drawPawn.drawPawn(idPlayerWhoTrows);
             orderTrowing.updateOrderTrowing(idPlayerWhoTrows);
         }
@@ -214,7 +216,8 @@ public class MapController implements Initializable {
         ThrowDice throwDice = new ThrowDice();
         OrderTrowing orderTrowing = new OrderTrowing();
         drawPawn.removeOldPawn(idPlayer);
-        listPlayers.updatePositionPlayer(idPlayer, throwDice.randomNumberONTheDice());
+        setNumberOnTheDice(throwDice.randomNumberOnTheDice());
+        listPlayers.updatePositionPlayer(idPlayer, getNumberOnTheDice());
         drawPawn.drawPawn(idPlayer);
         orderTrowing.updateOrderTrowing(idPlayer);
         actionPlayerAfterMove.doAction(idPlayer);
@@ -229,12 +232,12 @@ public class MapController implements Initializable {
         DrawPawn drawPawn = new DrawPawn();
         ListPlayers list = new ListPlayers();
         ThrowDice throwDice = new ThrowDice();
-
         int idPlayerWhoTrows;
         OrderTrowing orderTrowing = new OrderTrowing();
         idPlayerWhoTrows = orderTrowing.idPlayerWhoTrows();
         drawPawn.removeOldPawn(idPlayerWhoTrows);
-        list.updatePositionPlayer(idPlayerWhoTrows, throwDice.randomNumberONTheDice());
+        setNumberOnTheDice(throwDice.randomNumberOnTheDice());
+        list.updatePositionPlayer(idPlayerWhoTrows, getNumberOnTheDice());
         drawPawn.drawPawn(idPlayerWhoTrows);
         orderTrowing.waitingNumberOfQueues(idPlayerWhoTrows, 2);
     }
@@ -327,8 +330,8 @@ public class MapController implements Initializable {
         ListPlayers listPlayers = new ListPlayers();
         for (int i = 0; i < listPlayers.sizeListPlayers(); i++) {
             if (i == 0) {
-                Player play = (Player) listPlayers.getPlayer(i);
-                labelPlayer.setText(playerName + " :  " + play.getAmuontMoney());
+                UserPlayer play = (UserPlayer) listPlayers.getPlayer(i);
+                labelPlayer.setText(playerName + " :  " + play.getAmountMoney());
             } else if (i == 1) {
                 ComputerPlayer play = (ComputerPlayer) listPlayers.getPlayer(i);
                 labelComputer1.setText("Komputer czerwony : " + play.getAmountMoney());

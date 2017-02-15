@@ -10,7 +10,7 @@ public class ListPlayers {
 
 
     public void doListPlayer() {
-        listPlayers.add(new Player());
+        listPlayers.add(new UserPlayer());
 
         for (int i = listPlayers.size(); i < SettingNewGameController.getSelectedNumberOfPlayer(); i++) {
             listPlayers.add(new ComputerPlayer());
@@ -37,7 +37,7 @@ public class ListPlayers {
 
     public void updatePositionPlayer(int numberPlayer, int numberOnTheDice) {
         if (numberPlayer == 0) {
-            Player play = (Player) listPlayers.get(numberPlayer);
+            UserPlayer play = (UserPlayer) listPlayers.get(numberPlayer);
             play.setPositionPlayer(getNewPosition(play.getPositionPlayer(), numberOnTheDice));
         } else {
             ComputerPlayer play = (ComputerPlayer) listPlayers.get(numberPlayer);
@@ -56,7 +56,7 @@ public class ListPlayers {
     public int getOldPosition(int idPlayer) {
         int oldPosition;
         if (idPlayer == 0) {
-            Player play = (Player) listPlayers.get(idPlayer);
+            UserPlayer play = (UserPlayer) listPlayers.get(idPlayer);
             oldPosition = play.getPositionPlayer();
         } else {
             ComputerPlayer play = (ComputerPlayer) listPlayers.get(idPlayer);

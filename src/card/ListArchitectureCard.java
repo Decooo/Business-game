@@ -17,7 +17,7 @@ public class ListArchitectureCard {
 
     public void doListArchitectureCard() {
         listArchitectureCards[0] = new ArchitectureCard("Elektownia", 150, new int[]{4,10},-1, false );
-        listArchitectureCards[0] = new ArchitectureCard("Wodociąg", 150, new int[]{4,10},-1, false );
+        listArchitectureCards[1] = new ArchitectureCard("Wodociąg", 150, new int[]{4,10},-1, false );
 
     }
 

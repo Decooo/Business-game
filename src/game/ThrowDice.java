@@ -20,7 +20,7 @@ public class ThrowDice {
         }
     }
 
-    public int randomNumberONTheDice() {
+    public int randomNumberOnTheDice() {
         Random rand = new Random();
         int index = rand.nextInt(11);
         return numberOnTheDice[index];

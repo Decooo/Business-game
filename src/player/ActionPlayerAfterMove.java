@@ -1,17 +1,15 @@
 package player;
 
+import alert.AlertConfirmation;
+import alert.AlertInformation;
 import card.*;
 import controller.MapController;
 import game.ColorFieldPlayer;
 import javafx.geometry.Insets;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
-
-import java.util.Optional;
 
 /**
  * Created by Jakub on 13.02.2017.
@@ -23,21 +21,20 @@ public class ActionPlayerAfterMove extends ActionAfterMove {
     public void doAction(int idPlayer) {
         final int position;
         ListPlayers listPlayers = new ListPlayers();
-        Player player = (Player) listPlayers.getPlayer(idPlayer);
+        UserPlayer player = (UserPlayer) listPlayers.getPlayer(idPlayer);
         position = player.getPositionPlayer() - 1;
 
         if (orCardsToBuy(position) == true) {
-            ListArchitectureCard listArchitectureCard = new ListArchitectureCard();
-
-            ArchitectureCard card = listArchitectureCard.getListArchitectureCards(0);
-            Card card1 = listArchitectureCard.getListArchitectureCards(0);
-            System.out.println(card.getPrize());
-            System.out.println("prize 2: " + card1.getPrize());
+            Card card = doCardToBuy();
+            if (checkOwnerCard(idPlayer, card.getIdOwner()) == 0) {
+                possibilityOfBuyingCard(card, player);
+            } else if (checkOwnerCard(idPlayer, card.getIdOwner()) == 2) {
+                payCharge(player, card.getIdOwner(), card);
+            }
         }
-
     }
 
-    private Object doCardToBuy() {
+    private Card doCardToBuy() {
         if (getNumberList() == 0) {
             ListCityCard listCityCard = new ListCityCard();
             CityCard card = listCityCard.getCityCard(getIdCardInList());
@@ -53,30 +50,24 @@ public class ActionPlayerAfterMove extends ActionAfterMove {
         }
     }
 
-    @Override
-    void purchaseCard(int idPlayer, int position, int indexCard) {
-        ListCityCard listCityCard = new ListCityCard();
-        ListPlayers listPlayers = new ListPlayers();
-        Player player = (Player) listPlayers.getPlayer(idPlayer);
 
-        if (indexCard != -1) {
-
-            CityCard cityCard = listCityCard.getCityCard(indexCard);
-            if (cityCard.getIdOwner() == -1 && player.getAmuontMoney() >= cityCard.getPrice()) {
-                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                alert.setTitle("Kupno karty");
-                alert.setHeaderText("Czy czy chcesz kupić kartę " + cityCard.getNameCity() + " za " + cityCard.getPrice() + "$ ?");
-                alert.getButtonTypes().setAll(ButtonType.YES, ButtonType.NO);
-
-                Optional<ButtonType> result = alert.showAndWait();
-                if (result.get() == ButtonType.YES) {
-                    player.setAmuontMoney(player.getAmuontMoney() - cityCard.getPrice());
-                    cityCard.setIdOwner(idPlayer);
-                    MapController mapController = new MapController();
-                    mapController.getPaneField(position).setBackground(new Background(new BackgroundFill(Color.web(ColorFieldPlayer.fromValue(idPlayer).toString()), CornerRadii.EMPTY, Insets.EMPTY)));
-
-                }
+    public void possibilityOfBuyingCard(Card card, UserPlayer player) {
+        if (player.getAmountMoney() >= card.getPrice()) {
+            if (AlertConfirmation.AlertPurchaseCard(card.getName(), card.getPrice()) == true) {
+                purchaseCard(card, player, 0);
             }
+        } else {
+            AlertInformation.AlertLackOfMoney();
         }
+    }
+
+
+    @Override
+    void purchaseCard(Card card, UserPlayer player, int idPlayer) {
+        player.setAmountMoney(player.getAmountMoney() - card.getPrice());
+        card.setIdOwner(0);
+        MapController mapController = new MapController();
+        mapController.getPaneField(player.getPositionPlayer() - 1).setBackground(new Background(new BackgroundFill(Color.web(ColorFieldPlayer.fromValue(idPlayer).toString()), CornerRadii.EMPTY, Insets.EMPTY)));
+
     }
 }

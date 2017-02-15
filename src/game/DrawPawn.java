@@ -4,7 +4,7 @@ import controller.MapController;
 import javafx.scene.paint.Color;
 import player.ComputerPlayer;
 import player.ListPlayers;
-import player.Player;
+import player.UserPlayer;
 
 /**
  * Created by Jakub on 08.02.2017.
@@ -57,7 +57,7 @@ public class DrawPawn {
     }
 
     public void drawPlayerPawn(int i, Color c) {
-        Player play = (Player) listPlayers.getPlayer(i);
+        UserPlayer play = (UserPlayer) listPlayers.getPlayer(i);
         int positionPlayer = play.getPositionPlayer();
         MapController map = new MapController();
         double width = map.getPaneField(positionPlayer - 1).getWidth();
