@@ -1,28 +1,26 @@
 package player;
 
 import controller.SettingNewGameController;
-import game.OrderTrowing;
 
 /**
  * Created by Jakub on 08.02.2017.
  */
-public class ComputerPlayer implements IPlayer {
+public class ComputerPlayer extends Player {
 
     private static int numberComputerPlayer = 0;
-    private int positionComputerPlayer;
-    private int amountMoney;
+
 
     public ComputerPlayer() {
         numberComputerPlayer++;
-        setPositionComputerPlayer(1);
+        setPositionPlayer(1);
         setAmountMoney(SettingNewGameController.getSelectedAmountOfMoney());
     }
 
     @Override
     public String toString() {
         return "ComputerPlayer{" +
-                "positionComputerPlayer=" + positionComputerPlayer +
-                ", amountMoney=" + amountMoney +
+                "positionComputerPlayer=" + getPositionPlayer() +
+                ", amountMoney=" + getAmountMoney() +
                 '}';
     }
 
@@ -34,28 +32,10 @@ public class ComputerPlayer implements IPlayer {
         ComputerPlayer.numberComputerPlayer = numberComputerPlayer;
     }
 
-    public int getAmountMoney() {
-        return amountMoney;
-    }
-
-    public ComputerPlayer setAmountMoney(int amountMoney) {
-        this.amountMoney = amountMoney;
-        return this;
-    }
-
-
-    public int getPositionComputerPlayer() {
-        return positionComputerPlayer;
-    }
-
-    public ComputerPlayer setPositionComputerPlayer(int positionComputerPlayer) {
-        this.positionComputerPlayer = positionComputerPlayer;
-        return this;
-    }
 
     @Override
     public void startPosition() {
-        setPositionComputerPlayer(1);
+        setPositionPlayer(1);
     }
 
     @Override

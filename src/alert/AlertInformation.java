@@ -1,5 +1,6 @@
 package alert;
 
+import game.ColorComputerPlayer;
 import javafx.scene.control.Alert;
 
 /**
@@ -14,11 +15,20 @@ public class AlertInformation {
         alert.showAndWait();
     }
 
-    public static void AlertEmptyPlayerName(){
+    public static void AlertEmptyPlayerName() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Nazwa gracza");
         alert.setHeaderText("");
         alert.setContentText("Nazwa gracza nie może być pusta.");
         alert.showAndWait();
     }
+
+    public static void AlertComputerBuyCard(int idPlayer, String name, int price) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Kupiono karte");
+        alert.setHeaderText("");
+        alert.setContentText("Komputer " + ColorComputerPlayer.fromValue(idPlayer) + " kupił kartę " + name + " za " + price + "$.");
+        alert.showAndWait();
+    }
+
 }

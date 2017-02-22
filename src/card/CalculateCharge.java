@@ -24,7 +24,7 @@ public class CalculateCharge {
         int numbersCardsTheOwner = 0;
         ListCityCard listCityCard = new ListCityCard();
 
-        if (card.getLevelOfExpansion() != 0) {
+        if (card.getLevelOfExpansion() == 0) {
             for (int i = 0; i < ListCityCard.getListCityCard().length; i++) {
                 Card tempCard = listCityCard.getCityCard(i);
                 if (tempCard.getColorCard() == card.getColorCard()) {

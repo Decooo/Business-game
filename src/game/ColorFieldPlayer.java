@@ -14,13 +14,13 @@ public enum ColorFieldPlayer {
     color1(1) {
         @Override
         public String toString() {
-            return "#99ff99";
+            return "ff6666";
         }
     },
     color2(2) {
         @Override
         public String toString() {
-            return "ff6666";
+            return "#99ff99";
         }
     },
     color3(3) {
@@ -45,9 +45,5 @@ public enum ColorFieldPlayer {
         return null;
     }
 
-    public int value() {
-        return value;
-
-    }
 
 }

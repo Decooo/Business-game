@@ -41,7 +41,7 @@ public class ListPlayers {
             play.setPositionPlayer(getNewPosition(play.getPositionPlayer(), numberOnTheDice));
         } else {
             ComputerPlayer play = (ComputerPlayer) listPlayers.get(numberPlayer);
-            play.setPositionComputerPlayer(getNewPosition(play.getPositionComputerPlayer(), numberOnTheDice));
+            play.setPositionPlayer(getNewPosition(play.getPositionPlayer(), numberOnTheDice));
         }
     }
 
@@ -60,7 +60,7 @@ public class ListPlayers {
             oldPosition = play.getPositionPlayer();
         } else {
             ComputerPlayer play = (ComputerPlayer) listPlayers.get(idPlayer);
-            oldPosition = play.getPositionComputerPlayer();
+            oldPosition = play.getPositionPlayer();
         }
         return oldPosition;
     }

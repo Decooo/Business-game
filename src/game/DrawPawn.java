@@ -70,7 +70,7 @@ public class DrawPawn {
 
     public void drawComputerPawn(int i, Color c) {
         ComputerPlayer play = (ComputerPlayer) listPlayers.getPlayer(i);
-        int positionComputerPlayer = play.getPositionComputerPlayer();
+        int positionComputerPlayer = play.getPositionPlayer();
         MapController map = new MapController();
         double width = map.getPaneField(positionComputerPlayer - 1).getWidth();
         double height = map.getPaneField(positionComputerPlayer - 1).getHeight();

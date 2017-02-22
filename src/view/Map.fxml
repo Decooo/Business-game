@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -409,10 +410,11 @@
          </children>
       </Pane>
       <Button fx:id="btnNextPlayer" layoutX="1000.0" layoutY="542.0" mnemonicParsing="false" onAction="#nextPlayerAction" text="Następny gracz" />
-      <Button layoutX="581.0" layoutY="508.0" mnemonicParsing="false" onAction="#lostTwoQueuesAction" text="Tracisz 2 kolejki" />
+      <Button layoutX="542.0" layoutY="509.0" mnemonicParsing="false" onAction="#lostTwoQueuesAction" text="podejdz podana ilosc oczek" />
       <Button fx:id="btnThrowDice" layoutX="1010.0" layoutY="496.0" mnemonicParsing="false" onAction="#throwDiceAction" text="Rzuć kostką" />
       <Button fx:id="btnExpansionCard" layoutX="999.0" layoutY="455.0" mnemonicParsing="false" text="Rozbudowa kart" />
       <Button fx:id="btnSaleCard" layoutX="996.0" layoutY="415.0" mnemonicParsing="false" text="Sprzedaż/Zastaw" />
       <Button fx:id="btnReplacementCard" layoutX="1023.0" layoutY="375.0" mnemonicParsing="false" text="Handel" />
+      <TextField fx:id="textFieldThrowADice" layoutX="556.0" layoutY="468.0" />
    </children>
 </AnchorPane>

@@ -7,8 +7,6 @@ import controller.SettingNewGameController;
  */
 public class UserPlayer extends Player {
 
-    private int positionPlayer;
-    private int amountMoney;
 
     public UserPlayer() {
         setPositionPlayer(1);
@@ -18,29 +16,11 @@ public class UserPlayer extends Player {
     @Override
     public String toString() {
         return "UserPlayer{" +
-                "positionPlayer=" + positionPlayer +
-                ", amountMoney=" + amountMoney +
+                "positionPlayer=" + getPositionPlayer() +
+                ", amountMoney=" + getAmountMoney() +
                 '}';
     }
 
-
-    public int getAmountMoney() {
-        return amountMoney;
-    }
-
-    public UserPlayer setAmountMoney(int amountMoney) {
-        this.amountMoney = amountMoney;
-        return this;
-    }
-
-    public int getPositionPlayer() {
-        return positionPlayer;
-    }
-
-    public UserPlayer setPositionPlayer(int positionPlayer) {
-        this.positionPlayer = positionPlayer;
-        return this;
-    }
 
     @Override
     public void startPosition() {
