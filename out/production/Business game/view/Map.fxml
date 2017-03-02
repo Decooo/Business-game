@@ -105,7 +105,7 @@
       </Pane>
       <Pane fx:id="paneField18" layoutX="20.0" layoutY="340.0" prefHeight="120.0" prefWidth="80.0" rotate="270.0" style="-fx-background-color: White; -fx-border-color: black;">
          <children>
-            <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #003300#6600cc; -fx-border-color: black;" />
+            <Pane prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #003300; -fx-border-color: black;" />
             <Label layoutX="17.0" layoutY="20.0" text="Walencja" />
             <Label layoutX="25.0" layoutY="89.0" text="180 $" />
          </children>
@@ -412,7 +412,7 @@
       <Button fx:id="btnNextPlayer" layoutX="1000.0" layoutY="542.0" mnemonicParsing="false" onAction="#nextPlayerAction" text="Następny gracz" />
       <Button layoutX="542.0" layoutY="509.0" mnemonicParsing="false" onAction="#lostTwoQueuesAction" text="podejdz podana ilosc oczek" />
       <Button fx:id="btnThrowDice" layoutX="1010.0" layoutY="496.0" mnemonicParsing="false" onAction="#throwDiceAction" text="Rzuć kostką" />
-      <Button fx:id="btnExpansionCard" layoutX="999.0" layoutY="455.0" mnemonicParsing="false" text="Rozbudowa kart" />
+      <Button fx:id="btnExpansionCard" layoutX="999.0" layoutY="455.0" mnemonicParsing="false" onAction="#openExpansionCardAction" text="Rozbudowa kart" />
       <Button fx:id="btnSaleCard" layoutX="996.0" layoutY="415.0" mnemonicParsing="false" text="Sprzedaż/Zastaw" />
       <Button fx:id="btnReplacementCard" layoutX="1023.0" layoutY="375.0" mnemonicParsing="false" text="Handel" />
       <TextField fx:id="textFieldThrowADice" layoutX="556.0" layoutY="468.0" />

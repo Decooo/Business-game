@@ -31,4 +31,12 @@ public class AlertInformation {
         alert.showAndWait();
     }
 
+    public static void AlertNoColor(){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Brak koloru");
+        alert.setHeaderText("Nie posiadasz żadnego całego koloru");
+        alert.setContentText("Aby móc budować domy i hotele musisz posiadać wszystkie karty danego koloru");
+        alert.showAndWait();
+    }
+
 }

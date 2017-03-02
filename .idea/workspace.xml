@@ -2,26 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controller/ExpansionCardController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/ColorComputerPlayer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/player/ActionComputerAfterMove.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/ExpansionCard.fxml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Materiały/Zasady gry.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/player/IActionAfterMove.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/CurrentNumbersBuildings.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/updateDisplay/DisableButtonInMainFrameGame.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/updateDisplay/DisplayPlayers.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/updateDisplay/DisplayTabExpansionCard.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/updateDisplay/RefreshLabelNumberBuildings.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/updateDisplay/RefreshLabelPlayers.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Business game/controller/MapController.class" afterPath="$PROJECT_DIR$/out/production/Business game/controller/MapController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Business game/view/Map.fxml" afterPath="$PROJECT_DIR$/out/production/Business game/view/Map.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alert/AlertInformation.java" afterPath="$PROJECT_DIR$/src/alert/AlertInformation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/card/CalculateCharge.java" afterPath="$PROJECT_DIR$/src/card/CalculateCharge.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/ExpansionCardController.java" afterPath="$PROJECT_DIR$/src/controller/ExpansionCardController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/MapController.java" afterPath="$PROJECT_DIR$/src/controller/MapController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/ColorFieldPlayer.java" afterPath="$PROJECT_DIR$/src/game/ColorFieldPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/DrawPawn.java" afterPath="$PROJECT_DIR$/src/game/DrawPawn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/player/ActionAfterMove.java" afterPath="$PROJECT_DIR$/src/player/ActionAfterMove.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/player/ActionPlayerAfterMove.java" afterPath="$PROJECT_DIR$/src/player/ActionPlayerAfterMove.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/player/ComputerPlayer.java" afterPath="$PROJECT_DIR$/src/player/ComputerPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/player/ListPlayers.java" afterPath="$PROJECT_DIR$/src/player/ListPlayers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/player/Player.java" afterPath="$PROJECT_DIR$/src/player/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/player/UserPlayer.java" afterPath="$PROJECT_DIR$/src/player/UserPlayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/ExpansionCard.fxml" afterPath="$PROJECT_DIR$/src/view/ExpansionCard.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/Map.fxml" afterPath="$PROJECT_DIR$/src/view/Map.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -95,90 +88,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ActionAfterMove.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/player/ActionAfterMove.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="57" column="158" lean-forward="false" selection-start-line="57" selection-start-column="158" selection-end-line="57" selection-end-column="158" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ColorComputerPlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/ColorComputerPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ColorFieldPlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/ColorFieldPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MapController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/MapController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3638">
-              <caret line="242" column="21" lean-forward="false" selection-start-line="242" selection-start-column="21" selection-end-line="242" selection-end-column="21" />
+            <state relative-caret-position="582">
+              <caret line="281" column="44" lean-forward="false" selection-start-line="281" selection-start-column="44" selection-end-line="281" selection-end-column="44" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="method#doListPaneField#0;class#MapController#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActionComputerAfterMove.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/player/ActionComputerAfterMove.java">
+      <file leaf-file-name="DisplayTabExpansionCard.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/updateDisplay/DisplayTabExpansionCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="658">
-              <caret line="73" column="28" lean-forward="false" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExpansionCard.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/ExpansionCard.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExpansionCardController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/controller/ExpansionCardController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AlertInformation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/alert/AlertInformation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="293">
+              <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -198,11 +125,16 @@
         <option value="Unnamed" />
         <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="FXML" />
         <option value="FXMLController" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>currentPlayer</find>
+    </findStrings>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -221,14 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/view/MainMenu.fxml" />
-        <option value="$PROJECT_DIR$/src/controller/MainMenuController.java" />
-        <option value="$PROJECT_DIR$/src/view/SettingNewGame.fxml" />
-        <option value="$PROJECT_DIR$/src/game/NumberOfPlayerEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/game/AGame.java" />
-        <option value="$PROJECT_DIR$/src/player/IAllPlayers.java" />
-        <option value="$PROJECT_DIR$/src/player/IPlayer.java" />
         <option value="$PROJECT_DIR$/src/player/AllPlayers.java" />
         <option value="$PROJECT_DIR$/src/game/DetermineOrderTrowing.java" />
         <option value="$PROJECT_DIR$/src/player/CurrentNumberOfPlayers.java" />
@@ -264,14 +188,22 @@
         <option value="$PROJECT_DIR$/src/card/ListLocomotiveCard.java" />
         <option value="$PROJECT_DIR$/src/card/ListArchitectureCard.java" />
         <option value="$PROJECT_DIR$/src/card/CalculateCharge.java" />
-        <option value="$PROJECT_DIR$/src/card/ListCityCard.java" />
-        <option value="$PROJECT_DIR$/src/controller/MapController.java" />
-        <option value="$PROJECT_DIR$/src/alert/AlertInformation.java" />
         <option value="$PROJECT_DIR$/src/player/ActionAfterMove.java" />
         <option value="$PROJECT_DIR$/src/player/ActionPlayerAfterMove.java" />
         <option value="$PROJECT_DIR$/src/game/ColorFieldPlayer.java" />
         <option value="$PROJECT_DIR$/src/player/ActionComputerAfterMove.java" />
+        <option value="$PROJECT_DIR$/src/game/CurrentNumbersBuildings.java" />
         <option value="$PROJECT_DIR$/src/view/ExpansionCard.fxml" />
+        <option value="$PROJECT_DIR$/src/updateDisplay/refreshLabelPlayers.java" />
+        <option value="$PROJECT_DIR$/src/updateDisplay/DisplayPlayers.java" />
+        <option value="$PROJECT_DIR$/src/updateDisplay/RefreshLabelPlayers.java" />
+        <option value="$PROJECT_DIR$/src/updateDisplay/DisableButtonInMainFrameGame.java" />
+        <option value="$PROJECT_DIR$/src/updateDisplay/RefreshLabelNumberBuildings.java" />
+        <option value="$PROJECT_DIR$/src/card/ListCityCard.java" />
+        <option value="$PROJECT_DIR$/src/alert/AlertInformation.java" />
+        <option value="$PROJECT_DIR$/src/controller/ExpansionCardController.java" />
+        <option value="$PROJECT_DIR$/src/controller/MapController.java" />
+        <option value="$PROJECT_DIR$/src/updateDisplay/DisplayTabExpansionCard.java" />
       </list>
     </option>
   </component>
@@ -312,6 +244,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -357,7 +291,43 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="updateDisplay" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Business game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Business game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="player" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Business game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Business game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -449,8 +419,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -468,11 +436,11 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/GitHub.appref-ms" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="UserPlayer&#9;FILE&#9;file://F:/Programowanie/java/Business game/src/player/UserPlayer.java&#10;castin&#9;PSI&#9;JAVA://player.ComputerPlayer#orderCastingDice&#10;cas&#9;PSI&#9;JAVA://player.ComputerPlayer#orderCastingDice&#10;casting&#9;PSI&#9;JAVA://player.ComputerPlayer#orderCastingDice&#10;cast&#9;PSI&#9;JAVA://player.Player#setOrderCastingDice&#10;setting shorts cuts&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="calc&#9;FILE&#9;file://F:/Programowanie/java/Business game/src/card/CalculateCharge.java&#10;cal&#9;FILE&#9;file://F:/Programowanie/java/Business game/src/card/CalculateCharge.java&#10;player&#9;PSI&#9;JAVA://controller.SettingNewGameController#playerName&#10;curr&#9;FILE&#9;file://F:/Programowanie/java/Business game/src/player/CurrentNumberOfPlayers.java&#10;import&#9;ACTION&#9;ExportImportGroup&#10;UserPlayer&#9;FILE&#9;file://F:/Programowanie/java/Business game/src/player/UserPlayer.java&#10;castin&#9;PSI&#9;JAVA://player.ComputerPlayer#orderCastingDice&#10;cas&#9;PSI&#9;JAVA://player.ComputerPlayer#orderCastingDice&#10;casting&#9;PSI&#9;JAVA://player.ComputerPlayer#orderCastingDice&#10;cast&#9;PSI&#9;JAVA://player.Player#setOrderCastingDice&#10;setting shorts cuts&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -946,7 +914,10 @@
       <workItem from="1487424370522" duration="2509000" />
       <workItem from="1487458564097" duration="5052000" />
       <workItem from="1487605391868" duration="1794000" />
-      <workItem from="1487798138742" duration="737000" />
+      <workItem from="1487798138742" duration="1463000" />
+      <workItem from="1487889172647" duration="2047000" />
+      <workItem from="1488391230284" duration="18516000" />
+      <workItem from="1488484328942" duration="3197000" />
     </task>
     <task id="LOCAL-00001" summary="Interface game">
       <created>1486466368837</created>
@@ -1039,11 +1010,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487200803689</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Action computer player after move">
+      <created>1487799929614</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1487799929614</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157444000" />
+    <option name="totallyTimeSpent" value="181930000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1055,39 +1033,40 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20887446" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21969697" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23809524" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21969697" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24840085" sideWeight="0.6703755" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19669509" sideWeight="0.6703755" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36363637" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20887446" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1132,7 +1111,9 @@
     <MESSAGE value="Action after Move v1" />
     <MESSAGE value="Refactor cards" />
     <MESSAGE value="Calculate charge" />
-    <option name="LAST_COMMIT_MESSAGE" value="Calculate charge" />
+    <MESSAGE value="Action player after move" />
+    <MESSAGE value="Action computer player after move" />
+    <option name="LAST_COMMIT_MESSAGE" value="Action computer player after move" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1148,43 +1129,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/player/AllPlayers.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/net/URLClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="380" column="0" lean-forward="false" selection-start-line="380" selection-start-column="0" selection-end-line="380" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/javafx-src.zip!/javafx/scene/paint/Color.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="1875" column="43" lean-forward="false" selection-start-line="1875" selection-start-column="43" selection-end-line="1875" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/javafx-src.zip!/javafx/scene/shape/Ellipse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4279">
-          <caret line="56" column="31" lean-forward="false" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/DrawPawn.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/javafx-src.zip!/javafx/fxml/Initializable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="53" column="16" lean-forward="false" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/javafx-src.zip!/javafx/scene/Parent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-61">
-          <caret line="563" column="35" lean-forward="false" selection-start-line="563" selection-start-column="35" selection-end-line="563" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/javafx-src.zip!/javafx/scene/layout/Pane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
@@ -1200,13 +1144,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/player/CurrentNumberOfPlayers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1218,16 +1155,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/Map.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2082">
-          <caret line="407" column="104" lean-forward="false" selection-start-line="407" selection-start-column="104" selection-end-line="407" selection-end-column="104" />
         </state>
       </provider>
     </entry>
@@ -1296,20 +1223,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/card/alert.java" />
-    <entry file="file://$PROJECT_DIR$/src/controller/SettingNewGameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="59" column="16" lean-forward="true" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/alert/AlertConfirmation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/card/LocomotiveCard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1366,13 +1279,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/card/CityCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/card/ListLocomotiveCard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1384,13 +1290,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="18" column="92" lean-forward="false" selection-start-line="18" selection-start-column="92" selection-end-line="18" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/card/ListCityCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1406,7 +1305,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1414,17 +1312,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/player/ActionAfterMove.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="57" column="158" lean-forward="false" selection-start-line="57" selection-start-column="158" selection-end-line="57" selection-end-column="158" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1435,59 +1322,293 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/card/CalculateCharge.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/MapController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3638">
-          <caret line="242" column="21" lean-forward="false" selection-start-line="242" selection-start-column="21" selection-end-line="242" selection-end-column="21" />
-          <folding>
-            <element signature="method#doListPaneField#0;class#MapController#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/player/ActionComputerAfterMove.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
+        <state relative-caret-position="429">
           <caret line="73" column="28" lean-forward="false" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/Map.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="367" column="19" lean-forward="true" selection-start-line="368" selection-start-column="61" selection-end-line="368" selection-end-column="75" />
+          <folding>
+            <marker date="1488403514387" expanded="true" signature="7202:7508" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="7222:7494" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="7655:7961" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="7675:7947" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="8108:8412" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="8128:8398" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="8559:8861" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="8579:8847" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="9008:9311" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="9028:9297" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="9458:9759" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="9478:9745" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="9937:10245" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="9957:10231" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="10423:10731" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="10443:10717" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="10879:11188" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="10899:11174" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="11335:11648" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="11355:11634" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="11489:11613" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="11511:11592" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="11811:12124" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="11831:12110" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="11965:12089" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="11987:12068" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="12271:12588" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="12291:12574" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="12429:12553" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="12451:12532" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="12751:13068" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="12771:13054" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="12909:13033" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="12931:13012" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="13245:13621" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="13265:13607" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="13392:13521" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="13415:13496" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="13783:14159" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="13803:14145" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="13930:14059" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="13953:14034" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="14306:14682" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="14326:14668" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="14453:14582" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="14476:14557" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="14860:15236" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="14880:15222" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="15007:15136" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="15030:15111" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="15414:15789" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="15434:15775" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="15562:15685" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="15585:15660" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="15966:16345" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="15986:16331" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="16114:16245" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="16137:16220" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="16492:16863" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="16512:16849" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="16639:16763" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="16662:16738" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="17025:17399" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="17045:17385" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="17172:17295" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="17195:17270" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="17547:17985" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="17567:17971" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="17694:17819" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="17717:17794" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="18132:18570" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="18152:18556" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="18280:18401" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="18303:18376" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="18732:19172" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="18752:19158" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="18880:19008" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="18903:18983" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="19335:19875" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="19355:19861" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="19482:19610" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="19505:19585" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="20007:20390" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="20027:20376" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="20155:20281" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="20178:20256" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="20538:20991" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="20558:20977" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="20686:20811" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="20709:20786" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="21140:21629" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="21160:21615" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="21467:21594" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="21490:21569" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="21793:22969" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="21813:22955" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="21890:22014" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="21912:21993" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="22306:22430" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="22329:22405" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="22558:22682" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="22581:22657" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="22810:22934" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="22833:22909" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="23113:23350" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="23133:23336" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="23532:23765" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="23552:23751" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="23948:24180" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="23968:24166" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="24362:24578" ph="..." />
+            <marker date="1488403514387" expanded="true" signature="24382:24564" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player/CurrentNumberOfPlayers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player/ActionAfterMove.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="57" column="158" lean-forward="false" selection-start-line="57" selection-start-column="158" selection-end-line="57" selection-end-column="158" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/CurrentNumbersBuildings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/ExpansionCard.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="97" column="13" lean-forward="false" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/SettingNewGameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/updateDisplay/RefreshLabelNumberBuildings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/card/ListCityCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="106" lean-forward="false" selection-start-line="19" selection-start-column="106" selection-end-line="19" selection-end-column="106" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/alert/AlertInformation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="544">
+          <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/ExpansionCard.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/alert/AlertConfirmation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="153">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/card/CalculateCharge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="70" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/card/CityCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/updateDisplay/RefreshLabelPlayers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/updateDisplay/DisplayPlayers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/ExpansionCardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="37" />
+        <state relative-caret-position="497">
+          <caret line="74" column="39" lean-forward="true" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/updateDisplay/DisableButtonInMainFrameGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="164" lean-forward="false" selection-start-line="24" selection-start-column="164" selection-end-line="24" selection-end-column="164" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/MapController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="281" column="44" lean-forward="false" selection-start-line="281" selection-start-column="44" selection-end-line="281" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#doListPaneField#0;class#MapController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/updateDisplay/DisplayTabExpansionCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

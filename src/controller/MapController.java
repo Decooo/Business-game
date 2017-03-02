@@ -1,24 +1,33 @@
 package controller;
 
+import alert.AlertInformation;
 import card.InitializeListCards;
-import game.ColorComputerPlayer;
 import game.DrawPawn;
 import game.OrderTrowing;
 import game.ThrowDice;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Ellipse;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import player.ActionComputerAfterMove;
 import player.ActionPlayerAfterMove;
 import player.ListPlayers;
-import player.Player;
+import updateDisplay.DisableButtonInMainFrameGame;
+import updateDisplay.DisplayPlayers;
+import updateDisplay.DisplayTabExpansionCard;
+import updateDisplay.RefreshLabelPlayers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -157,7 +166,7 @@ public class MapController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         doListPaneField();
-        displayPlayers(numberOfPlayers);
+        DisplayPlayers.displayPlayers(numberOfPlayers, paneComputer1, paneComputer2, paneComputer3);
 
         OrderTrowing drawOrder = new OrderTrowing();
         drawOrder.doDetermineOrderTrowing();
@@ -165,7 +174,7 @@ public class MapController implements Initializable {
         ListPlayers listPlayers = new ListPlayers();
         listPlayers.doListPlayer();
 
-        refreshLabel();
+        RefreshLabelPlayers.refreshLabelPlayer(labelPlayer, labelComputer1, labelComputer2, labelComputer3);
 
         InitializeListCards initializeListCards = new InitializeListCards();
         initializeListCards.initializeListCards();
@@ -176,18 +185,6 @@ public class MapController implements Initializable {
         startDisableButton();
     }
 
-    public void displayPlayers(int numberOfPlayers) {
-        if (numberOfPlayers == 2) {
-            paneComputer1.setVisible(true);
-        } else if (numberOfPlayers == 3) {
-            paneComputer1.setVisible(true);
-            paneComputer2.setVisible(true);
-        } else if (numberOfPlayers == 4) {
-            paneComputer1.setVisible(true);
-            paneComputer2.setVisible(true);
-            paneComputer3.setVisible(true);
-        }
-    }
 
     @FXML
     private void nextPlayerAction(ActionEvent event) {
@@ -199,11 +196,11 @@ public class MapController implements Initializable {
 
         idPlayerWhoTrows = orderTrowing.idPlayerWhoTrows();
         if (idPlayerWhoTrows == 0) {
-            disableButtonWhenMovePlayer();
+            DisableButtonInMainFrameGame.disableButtonWhenMovePlayer(btnNextPlayer, btnExpansionCard, btnReplacementCard, btnSaleCard, btnThrowDice);
             movePlayer = true;
         } else {
             ActionComputerAfterMove actionComputerAfterMove = new ActionComputerAfterMove();
-            disableButtonWhenMoveComputerPlayer();
+            DisableButtonInMainFrameGame.disableButtonWhenMoveComputerPlayer(btnNextPlayer, btnExpansionCard, btnReplacementCard, btnSaleCard, btnThrowDice);
             drawPawn.removeOldPawn(idPlayerWhoTrows);
             setNumberOnTheDice(throwDice.randomNumberOnTheDice());
             list.updatePositionPlayer(idPlayerWhoTrows, getNumberOnTheDice());
@@ -211,7 +208,8 @@ public class MapController implements Initializable {
             orderTrowing.updateOrderTrowing(idPlayerWhoTrows);
             actionComputerAfterMove.doAction(idPlayerWhoTrows);
         }
-        refreshLabel();
+        RefreshLabelPlayers.refreshLabelPlayer(labelPlayer, labelComputer1, labelComputer2, labelComputer3);
+
     }
 
     @FXML
@@ -230,8 +228,9 @@ public class MapController implements Initializable {
         actionPlayerAfterMove.doAction(idPlayer);
 
         movePlayer = false;
-        disableButtonWhenMoveComputerPlayer();
-        refreshLabel();
+        DisableButtonInMainFrameGame.disableButtonWhenPlayerThrowDice(btnNextPlayer, btnExpansionCard, btnReplacementCard, btnSaleCard, btnThrowDice);
+        RefreshLabelPlayers.refreshLabelPlayer(labelPlayer, labelComputer1, labelComputer2, labelComputer3);
+
     }
 
     @FXML
@@ -251,8 +250,37 @@ public class MapController implements Initializable {
         actionPlayerAfterMove.doAction(idPlayerWhoTrows);
 
         movePlayer = false;
-        disableButtonWhenMoveComputerPlayer();
-        refreshLabel();
+        DisableButtonInMainFrameGame.disableButtonWhenMoveComputerPlayer(btnNextPlayer, btnExpansionCard, btnReplacementCard, btnSaleCard, btnThrowDice);
+        RefreshLabelPlayers.refreshLabelPlayer(labelPlayer, labelComputer1, labelComputer2, labelComputer3);
+
+    }
+
+    @FXML
+    private void openExpansionCardAction(ActionEvent event) {
+        boolean orOpenTheStage = false;
+
+        for (int i = 0; i < 9; i++) {
+            if (DisplayTabExpansionCard.ifThePlayerHaveColor(i) == true) {
+                orOpenTheStage = true;
+                break;
+            }
+        }
+
+        if (orOpenTheStage == true) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/ExpansionCard.fxml"));
+                Parent root1 = fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setTitle("Rozbudowa kart");
+                stage.setScene(new Scene(root1));
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.showAndWait();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else{
+            AlertInformation.AlertNoColor();
+        }
     }
 
     public void drawPane(Pane pane, Color c, double centerX, double centerY, int idPlayer) {
@@ -314,48 +342,14 @@ public class MapController implements Initializable {
         listPaneField.add(paneField42);
     }
 
-    private void disableButtonWhenMoveComputerPlayer() {
-        btnNextPlayer.setDisable(false);
-        btnExpansionCard.setDisable(true);
-        btnReplacementCard.setDisable(true);
-        btnSaleCard.setDisable(true);
-        btnThrowDice.setDisable(true);
-    }
-
-    private void disableButtonWhenMovePlayer() {
-        btnNextPlayer.setDisable(true);
-        btnExpansionCard.setDisable(false);
-        btnReplacementCard.setDisable(false);
-        btnSaleCard.setDisable(false);
-        btnThrowDice.setDisable(false);
-    }
 
     private void startDisableButton() {
         OrderTrowing drawOrder = new OrderTrowing();
         int idPlayerWhoTrows = drawOrder.idPlayerWhoTrows();
         if (idPlayerWhoTrows == 0) {
-            disableButtonWhenMovePlayer();
-        } else disableButtonWhenMoveComputerPlayer();
-
-    }
-
-    private void refreshLabel() {
-        ListPlayers listPlayers = new ListPlayers();
-        for (int i = 0; i < listPlayers.sizeListPlayers(); i++) {
-            if (i == 0) {
-                Player player = (Player) listPlayers.getPlayer(i);
-                labelPlayer.setText(playerName + " :  " + player.getAmountMoney());
-            } else if (i == 1) {
-                Player player = (Player) listPlayers.getPlayer(i);
-                labelComputer1.setText("Komputer "+ ColorComputerPlayer.fromValue(i) +" : "  + player.getAmountMoney());
-            } else if (i == 2) {
-                Player player = (Player) listPlayers.getPlayer(i);
-                labelComputer2.setText("Komputer "+ ColorComputerPlayer.fromValue(i) +" : "  + player.getAmountMoney());
-            } else if (i == 3) {
-                Player player = (Player) listPlayers.getPlayer(i);
-                labelComputer3.setText("Komputer "+ ColorComputerPlayer.fromValue(i) +" : "  + player.getAmountMoney());
-            }
-        }
+            DisableButtonInMainFrameGame.disableButtonWhenMovePlayer(btnNextPlayer, btnExpansionCard, btnReplacementCard, btnSaleCard, btnThrowDice);
+        } else
+            DisableButtonInMainFrameGame.disableButtonWhenMoveComputerPlayer(btnNextPlayer, btnExpansionCard, btnReplacementCard, btnSaleCard, btnThrowDice);
     }
 
 }
