@@ -1,6 +1,7 @@
 package controller;
 
 import alert.AlertInformation;
+import card.EntireColor;
 import card.InitializeListCards;
 import game.DrawPawn;
 import game.OrderTrowing;
@@ -205,8 +206,9 @@ public class MapController implements Initializable {
             setNumberOnTheDice(throwDice.randomNumberOnTheDice());
             list.updatePositionPlayer(idPlayerWhoTrows, getNumberOnTheDice());
             drawPawn.drawPawn(idPlayerWhoTrows);
-            orderTrowing.updateOrderTrowing(idPlayerWhoTrows);
             actionComputerAfterMove.doAction(idPlayerWhoTrows);
+
+            orderTrowing.updateOrderTrowing(idPlayerWhoTrows);
         }
         RefreshLabelPlayers.refreshLabelPlayer(labelPlayer, labelComputer1, labelComputer2, labelComputer3);
 
@@ -224,9 +226,9 @@ public class MapController implements Initializable {
         setNumberOnTheDice(throwDice.randomNumberOnTheDice());
         listPlayers.updatePositionPlayer(idPlayer, getNumberOnTheDice());
         drawPawn.drawPawn(idPlayer);
-        orderTrowing.updateOrderTrowing(idPlayer);
         actionPlayerAfterMove.doAction(idPlayer);
 
+        orderTrowing.updateOrderTrowing(idPlayer);
         movePlayer = false;
         DisableButtonInMainFrameGame.disableButtonWhenPlayerThrowDice(btnNextPlayer, btnExpansionCard, btnReplacementCard, btnSaleCard, btnThrowDice);
         RefreshLabelPlayers.refreshLabelPlayer(labelPlayer, labelComputer1, labelComputer2, labelComputer3);
@@ -246,9 +248,9 @@ public class MapController implements Initializable {
         setNumberOnTheDice(Integer.valueOf(textFieldThrowADice.getText()));
         list.updatePositionPlayer(idPlayerWhoTrows, getNumberOnTheDice());
         drawPawn.drawPawn(idPlayerWhoTrows);
-        orderTrowing.updateOrderTrowing(idPlayerWhoTrows);
         actionPlayerAfterMove.doAction(idPlayerWhoTrows);
 
+        orderTrowing.updateOrderTrowing(idPlayerWhoTrows);
         movePlayer = false;
         DisableButtonInMainFrameGame.disableButtonWhenMoveComputerPlayer(btnNextPlayer, btnExpansionCard, btnReplacementCard, btnSaleCard, btnThrowDice);
         RefreshLabelPlayers.refreshLabelPlayer(labelPlayer, labelComputer1, labelComputer2, labelComputer3);
@@ -260,7 +262,7 @@ public class MapController implements Initializable {
         boolean orOpenTheStage = false;
 
         for (int i = 0; i < 9; i++) {
-            if (DisplayTabExpansionCard.ifThePlayerHaveColor(i) == true) {
+            if (EntireColor.ifThePlayerHaveColor(i,0) == true) {
                 orOpenTheStage = true;
                 break;
             }

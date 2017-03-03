@@ -1,46 +1,41 @@
 package updateDisplay;
 
-import card.Card;
-import card.ListCityCard;
+import card.EntireColor;
 import controller.ExpansionCardController;
 import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 
 /**
  * Created by Jakub on 01.03.2017.
  */
 public class DisplayTabExpansionCard {
 
-    public static void displayTabExpansionCard() {
+    public static void displayTabExpansionCard(TabPane tabPane) {
+        int idOpenTab = -1;
+
+        DisplayCheckBoxExpansionCard displayCheckBoxExpansionCard = new DisplayCheckBoxExpansionCard();
 
         for (int i = 0; i < ExpansionCardController.getSizeTabExpansionCard(); i++) {
 
-            if (ifThePlayerHaveColor(i) == true) {
+            if (EntireColor.ifThePlayerHaveColor(i, 0) == true) {
                 Tab tab = ExpansionCardController.getTabExpansionCard(i);
                 tab.setDisable(false);
+
+                displayCheckBoxExpansionCard.displayCheckBox(i);
+
+                if (idOpenTab == -1) {
+                    idOpenTab = i;
+                }
+
             } else {
                 Tab tab = ExpansionCardController.getTabExpansionCard(i);
                 tab.setDisable(true);
             }
         }
-    }
-
-    public static boolean ifThePlayerHaveColor(int idColor) {
-        ListCityCard listCityCard = new ListCityCard();
-        int numbersCardOfTheColor = 0;
-        int numbersCardsTheOwner = 0;
-        for (int j = 0; j < ListCityCard.getListCityCard().length; j++) {
-            Card tempCard = listCityCard.getCityCard(j);
-            if (tempCard.getColorCard() == idColor) {
-                numbersCardOfTheColor++;
-                if (tempCard.getIdOwner() == 0) {
-                    numbersCardsTheOwner++;
-                }
-            }
+        if (idOpenTab != -1) {
+            tabPane.getSelectionModel().select(idOpenTab);
         }
-
-        if (numbersCardOfTheColor == numbersCardsTheOwner && numbersCardOfTheColor != 0) {
-            return true;
-        } else return false;
     }
+
 
 }

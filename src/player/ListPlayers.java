@@ -37,10 +37,10 @@ public class ListPlayers {
 
     public void updatePositionPlayer(int numberPlayer, int numberOnTheDice) {
         if (numberPlayer == 0) {
-            UserPlayer play = (UserPlayer) listPlayers.get(numberPlayer);
+            Player play = (UserPlayer) listPlayers.get(numberPlayer);
             play.setPositionPlayer(getNewPosition(play.getPositionPlayer(), numberOnTheDice));
         } else {
-            ComputerPlayer play = (ComputerPlayer) listPlayers.get(numberPlayer);
+            Player play = (ComputerPlayer) listPlayers.get(numberPlayer);
             play.setPositionPlayer(getNewPosition(play.getPositionPlayer(), numberOnTheDice));
         }
     }
@@ -56,10 +56,10 @@ public class ListPlayers {
     public int getOldPosition(int idPlayer) {
         int oldPosition;
         if (idPlayer == 0) {
-            UserPlayer play = (UserPlayer) listPlayers.get(idPlayer);
+            Player play = (UserPlayer) listPlayers.get(idPlayer);
             oldPosition = play.getPositionPlayer();
         } else {
-            ComputerPlayer play = (ComputerPlayer) listPlayers.get(idPlayer);
+            Player play = (ComputerPlayer) listPlayers.get(idPlayer);
             oldPosition = play.getPositionPlayer();
         }
         return oldPosition;

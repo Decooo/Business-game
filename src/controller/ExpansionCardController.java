@@ -6,6 +6,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import updateDisplay.DisplayTabExpansionCard;
 import updateDisplay.RefreshLabelNumberBuildings;
@@ -22,6 +24,7 @@ import java.util.ResourceBundle;
  */
 public class ExpansionCardController implements Initializable {
     static List<Tab> tabExpansionCard = new ArrayList<>(8);
+    static List<AnchorPane> anchorPaneCheckBox = new ArrayList<>(8);
     @FXML
     private Label labelHouses;
     @FXML
@@ -42,9 +45,30 @@ public class ExpansionCardController implements Initializable {
     private Tab tabBenelux;
     @FXML
     private Tab tabAustria;
-
+    @FXML
+    private TabPane tabPaneChoiceColor;
     @FXML
     private Button btnCloseStage;
+    @FXML
+    private AnchorPane anchorPaneGreece;
+    @FXML
+    private AnchorPane anchorPanePoland;
+    @FXML
+    private AnchorPane anchorPaneFrance;
+    @FXML
+    private AnchorPane anchorPaneSpain;
+    @FXML
+    private AnchorPane anchorPaneItaly;
+    @FXML
+    private AnchorPane anchorPaneGermany;
+    @FXML
+    private AnchorPane anchorPaneBenelux;
+    @FXML
+    private AnchorPane anchorPaneAustria;
+
+    public static AnchorPane getAnchorPaneCheckBox(int index) {
+        return anchorPaneCheckBox.get(index);
+    }
 
     public static Tab getTabExpansionCard(int index) {
         return tabExpansionCard.get(index);
@@ -54,12 +78,18 @@ public class ExpansionCardController implements Initializable {
         return tabExpansionCard.size();
     }
 
+    public TabPane getTabPaneChoiceColor() {
+        return tabPaneChoiceColor;
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         tabExpansionCard.clear();
-        doTabExpansionCard();
+        anchorPaneCheckBox.clear();
+        doListPane();
         RefreshLabelNumberBuildings.refreshLabels(labelHouses, labelHotels);
-        DisplayTabExpansionCard.displayTabExpansionCard();
+        DisplayTabExpansionCard.displayTabExpansionCard(getTabPaneChoiceColor());
+
     }
 
     @FXML
@@ -72,7 +102,7 @@ public class ExpansionCardController implements Initializable {
         stage.close();
     }
 
-    private void doTabExpansionCard() {
+    private void doListPane() {
         tabExpansionCard.add(tabGreece);
         tabExpansionCard.add(tabPoland);
         tabExpansionCard.add(tabFrance);
@@ -81,5 +111,14 @@ public class ExpansionCardController implements Initializable {
         tabExpansionCard.add(tabItaly);
         tabExpansionCard.add(tabBenelux);
         tabExpansionCard.add(tabAustria);
+        anchorPaneCheckBox.add(anchorPaneGreece);
+        anchorPaneCheckBox.add(anchorPanePoland);
+        anchorPaneCheckBox.add(anchorPaneFrance);
+        anchorPaneCheckBox.add(anchorPaneSpain);
+        anchorPaneCheckBox.add(anchorPaneGermany);
+        anchorPaneCheckBox.add(anchorPaneItaly);
+        anchorPaneCheckBox.add(anchorPaneBenelux);
+        anchorPaneCheckBox.add(anchorPaneAustria);
     }
+
 }
