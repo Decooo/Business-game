@@ -24,6 +24,7 @@ public class DisplayCheckBoxExpansionCard {
             }
         }
         unblockCheckBox(idColor, minLvl(lvlExpansionCard), maxLvl(lvlExpansionCard));
+        selectedCheckBox(idColor, lvlExpansionCard);
     }
 
     private void unblockCheckBox(int idColor, int minLvlExpansion, int maxLvlExpansion) {
@@ -55,8 +56,7 @@ public class DisplayCheckBoxExpansionCard {
                 }
             }
 
-        } else if ((maxLvlExpansion == minLvlExpansion && minLvlExpansion == 5) ||
-                (maxLvlExpansion != minLvlExpansion && minLvlExpansion == 0)) {
+        } else {
             AnchorPane anchorPane = ExpansionCardController.getAnchorPaneCheckBox(idColor);
             String id = "";
             for (int i = 0; i < anchorPane.getChildren().size(); i++) {
@@ -68,21 +68,8 @@ public class DisplayCheckBoxExpansionCard {
                     checkBox.setDisable(false);
                 }
             }
-        } else {
-            AnchorPane anchorPane = ExpansionCardController.getAnchorPaneCheckBox(idColor);
-            String id = "";
-            for (int i = 0; i < anchorPane.getChildren().size(); i++) {
-                if (anchorPane.getChildren().get(i).getId() != null) {
-                    id = anchorPane.getChildren().get(i).getId();
-                }
-                if (id.contains("lvl" + maxLvlExpansion) || id.contains("lvl" + minLvlExpansion)) {
-                    CheckBox checkBox = (CheckBox) anchorPane.getChildren().get(i);
-                    checkBox.setDisable(false);
-                }
-            }
         }
     }
-
 
     private int maxLvl(List<Integer> lvlExpansionCard) {
         int max = lvlExpansionCard.get(0);
@@ -104,6 +91,45 @@ public class DisplayCheckBoxExpansionCard {
             }
         }
         return min;
+    }
+
+    public void selectedCheckBox(int idColor, List<Integer> lvlExpansionCard) {
+        AnchorPane anchorPane = ExpansionCardController.getAnchorPaneCheckBox(idColor);
+        String idNameCheckBox = "";
+        for (int i = 0; i < lvlExpansionCard.size(); i++) {
+            int lvl = lvlExpansionCard.get(i);
+
+            if (lvl == 0) {
+                continue;
+            }
+            for (int j = 0; j < anchorPane.getChildren().size(); j++) {
+                if (anchorPane.getChildren().get(j).getId() != null) {
+                    idNameCheckBox = anchorPane.getChildren().get(j).getId();
+                }
+                for (int k = 1; k <= lvl; k++) {
+                    if (idNameCheckBox.equals("lvl" + k + romanNumberCard(i) + letterIndicatingColor(idColor))) {
+                        CheckBox checkBox = (CheckBox) anchorPane.getChildren().get(j);
+                        checkBox.setSelected(true);
+                        checkBox.setStyle("-fx-font-weight: bold;");
+
+                    }
+                }
+            }
+        }
+    }
+
+    private String romanNumberCard(int number) {
+        number++;
+        if (number == 1) {
+            return "I";
+        } else if (number == 2) {
+            return "II";
+        } else return "III";
+    }
+
+    public String letterIndicatingColor(int idColor) {
+        String[] letter = {"g", "p", "f", "s", "ge", "it", "b", "a"};
+        return letter[idColor];
     }
 
 }

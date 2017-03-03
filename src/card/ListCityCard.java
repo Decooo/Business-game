@@ -12,8 +12,8 @@ public class ListCityCard {
     }
 
     public void doListCityCard() {
-        listCityCard[0] = new CityCard("Saloniki", 60, 50, 0, new int[]{2, 10, 30, 90, 160, 250}, 0, 0, false);
-        listCityCard[1] = new CityCard("Ateny", 60, 50, 0, new int[]{4, 20, 60, 180, 320, 450}, 0, 0, false);
+        listCityCard[0] = new CityCard("Saloniki", 60, 50, 0, new int[]{2, 10, 30, 90, 160, 250}, 0, -1, false);
+        listCityCard[1] = new CityCard("Ateny", 60, 50, 0, new int[]{4, 20, 60, 180, 320, 450}, 0, -1, false);
 
         listCityCard[2] = new CityCard("Rzeszów", 100, 50, 0, new int[]{6, 30, 90, 270, 400, 550}, 1, -1, false);
         listCityCard[3] = new CityCard("Kraków", 100, 50, 0, new int[]{6, 30, 90, 270, 400, 550}, 1, -1, false);
