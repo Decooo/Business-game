@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="525.0" prefWidth="704.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ExpansionCardController">
+   <children>
+      <TabPane fx:id="tabPaneChoiceColor" prefHeight="462.0" prefWidth="704.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabGreece" closable="false" style="-fx-background-color: Orange;" text="Grecja">
+            <content>
+              <AnchorPane fx:id="anchorPaneGreece" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="greeceCard1" layoutX="127.0" layoutY="20.0" prefHeight="200.0" prefWidth="160.0" style="-fx-border-color: Black;">
+                           <children>
+                              <Pane layoutX="9.0" layoutY="8.0" prefHeight="35.0" prefWidth="142.0" style="-fx-border-color: Black; -fx-background-color: Orange;">
+                                 <children>
+                                    <Label layoutX="45.0" layoutY="7.0" text="Saloniki">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Label layoutX="5.0" layoutY="47.0" prefHeight="17.0" prefWidth="150.0" text="   Cena: 60$       Opłata: 2$ " />
+                              <Line endX="160.0" layoutY="70.0" />
+                              <Label layoutX="30.0" layoutY="77.0" text="1 dom" />
+                              <Label layoutX="28.0" layoutY="92.0" text="2 domy" />
+                              <Label layoutX="27.0" layoutY="109.0" text="3 domy" />
+                              <Label layoutX="27.0" layoutY="126.0" text="4 domy" />
+                              <Label layoutX="32.0" layoutY="143.0" text="Hotel" />
+                              <Label layoutX="107.0" layoutY="77.0" text="10$" />
+                              <Label layoutX="104.0" layoutY="126.0" text="160$" />
+                              <Label layoutX="107.0" layoutY="92.0" text="30$" />
+                              <Label layoutX="107.0" layoutY="109.0" text="90$" />
+                              <Label layoutX="104.0" layoutY="143.0" text="250$" />
+                              <Line endX="160.0" layoutY="165.0" />
+                              <Label layoutX="12.0" layoutY="166.0" text="Koszt jednego domu: 50$" />
+                              <Label layoutX="49.0" layoutY="181.0" text="Zastaw: 30$" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="greeceCard2" layoutX="412.0" layoutY="20.0" prefHeight="200.0" prefWidth="160.0" style="-fx-border-color: Black;">
+                           <children>
+                              <Pane layoutX="9.0" layoutY="8.0" prefHeight="35.0" prefWidth="142.0" style="-fx-border-color: Black; -fx-background-color: Orange;">
+                                 <children>
+                                    <Label layoutX="52.0" layoutY="7.0" text="Ateny">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Label layoutX="5.0" layoutY="47.0" prefHeight="17.0" prefWidth="150.0" text="   Cena: 60$       Opłata: 4$ " />
+                              <Line endX="160.0" layoutY="70.0" />
+                              <Label layoutX="30.0" layoutY="77.0" text="1 dom" />
+                              <Label layoutX="28.0" layoutY="92.0" text="2 domy" />
+                              <Label layoutX="27.0" layoutY="109.0" text="3 domy" />
+                              <Label layoutX="27.0" layoutY="126.0" text="4 domy" />
+                              <Label layoutX="32.0" layoutY="143.0" text="Hotel" />
+                              <Label layoutX="107.0" layoutY="77.0" text="20$" />
+                              <Label layoutX="104.0" layoutY="126.0" text="320$" />
+                              <Label layoutX="107.0" layoutY="92.0" text="60$" />
+                              <Label layoutX="104.0" layoutY="109.0" text="180$" />
+                              <Label layoutX="104.0" layoutY="143.0" text="450$" />
+                              <Line endX="160.0" layoutY="165.0" />
+                              <Label layoutX="12.0" layoutY="166.0" text="Koszt jednego domu: 50$" />
+                              <Label layoutX="49.0" layoutY="181.0" text="Zastaw: 30$" />
+                           </children>
+                        </Pane>
+                        <Button fx:id="btnAcceptGreece" layoutX="318.0" layoutY="378.0" mnemonicParsing="false" text="Zatwierdź" />
+                        <CheckBox fx:id="lvl1Ig" disable="true" layoutX="177.0" layoutY="243.0" mnemonicParsing="false" text="1 dom" />
+                        <CheckBox fx:id="lvl2Ig" disable="true" layoutX="177.0" layoutY="271.0" mnemonicParsing="false" text="2 domy" />
+                        <CheckBox fx:id="lvl3Ig" disable="true" layoutX="177.0" layoutY="302.0" mnemonicParsing="false" text="3 domy" />
+                        <CheckBox fx:id="lvl4Ig" disable="true" layoutX="177.0" layoutY="332.0" mnemonicParsing="false" text="4 domy" />
+                        <CheckBox fx:id="lvl5Ig" disable="true" layoutX="177.0" layoutY="361.0" mnemonicParsing="false" text="Hotel" />
+                        <CheckBox fx:id="lvl1IIg" disable="true" layoutX="462.0" layoutY="243.0" mnemonicParsing="false" text="1 dom" />
+                        <CheckBox fx:id="lvl2IIg" disable="true" layoutX="462.0" layoutY="271.0" mnemonicParsing="false" text="2 domy" />
+                        <CheckBox fx:id="lvl3IIg" disable="true" layoutX="462.0" layoutY="302.0" mnemonicParsing="false" text="3 domy" />
+                        <CheckBox fx:id="lvl4IIg" disable="true" layoutX="462.0" layoutY="332.0" mnemonicParsing="false" text="4 domy" />
+                        <CheckBox fx:id="lvl5IIg" disable="true" layoutX="462.0" layoutY="361.0" mnemonicParsing="false" text="Hotel" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabPoland" style="-fx-background-color: #00ffcc;" text="Polska">
+            <content>
+              <AnchorPane fx:id="anchorPanePoland" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="352.0" layoutY="180.0" text="Polska" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabFrance" style="-fx-background-color: #6600cc; -fx-text-fill: white;" text="Francja">
+              <content>
+                <AnchorPane fx:id="anchorPaneFrance" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="302.0" layoutY="173.0" text="Francja" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tabSpain" style="-fx-background-color: green;" text="Hiszpania">
+              <content>
+                <AnchorPane fx:id="anchorPaneSpain" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="278.0" layoutY="159.0" text="Hiszpania" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tabGermany" style="-fx-background-color: Brown;" text="Niemcy">
+              <content>
+                <AnchorPane fx:id="anchorPaneGermany" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="283.0" layoutY="140.0" text="Niemcy" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tabItaly" style="-fx-background-color: Gray; -fx-text-fill: white;" text="Włochy">
+              <content>
+                <AnchorPane fx:id="anchorPaneItaly" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="338.0" layoutY="208.0" text="Włochy" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tabBenelux" style="-fx-Background-color: #990066;" text="Benelux">
+              <content>
+                <AnchorPane fx:id="anchorPaneBenelux" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="338.0" layoutY="208.0" text="Benelux" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tabAustria" style="-fx-background-color: Black;" text="Austria">
+              <content>
+                <AnchorPane fx:id="anchorPaneAustria" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="334.0" layoutY="76.0" text="Austria" />
+                        <Button layoutX="337.0" layoutY="360.0" mnemonicParsing="false" text="Zatwierdź" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="278.0" layoutY="481.0" text="Stan konta: 100$ ">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCloseStage" layoutX="564.0" layoutY="479.0" mnemonicParsing="false" onAction="#closeStageAction" text="Zamknij" />
+      <Label fx:id="labelHouses" layoutX="36.0" layoutY="473.0" text="Pozostała ilość domków:" />
+      <Label fx:id="labelHotels" layoutX="44.0" layoutY="494.0" text="Pozostała ilość hoteli:" />
+   </children>
+</AnchorPane>
